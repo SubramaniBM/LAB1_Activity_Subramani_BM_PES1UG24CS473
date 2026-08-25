@@ -1,0 +1,84 @@
+@startuml InternalMicroserviceCatalogUseCases
+
+' ──────────────────────────────────────────────
+' Title
+' ──────────────────────────────────────────────
+title Internal Microservice Catalog & Health Portal\nUML Use-Case Diagram
+
+' ──────────────────────────────────────────────
+' Actors
+' ──────────────────────────────────────────────
+actor "DevOps Engineer" as DevOps
+actor "System Architect" as Architect
+actor "Notification Service\n(External)" as NotifSvc <<external>>
+
+' ──────────────────────────────────────────────
+' System Boundary
+' ──────────────────────────────────────────────
+rectangle "Internal Microservice Catalog & Health Portal" {
+
+    ' ── Primary Use Cases ──
+    usecase "Register / Update\nMicroservice" as UC1
+    usecase "Search Service\nCatalog" as UC2
+    usecase "View Dependency\nGraph" as UC3
+    usecase "Monitor Service\nHealth" as UC4
+    usecase "View API\nDocumentation" as UC5
+    usecase "Configure Alert\nChannels" as UC6
+
+    ' ── Included Use Cases ──
+    usecase "Authenticate via\nEnterprise SSO" as UC_Auth
+    usecase "Validate Service\nMetadata" as UC_Validate
+
+    ' ── Extended Use Case ──
+    usecase "Dispatch Downtime\nAlert" as UC_Alert
+
+}
+
+' ──────────────────────────────────────────────
+' Actor ↔ Use-Case Associations
+' ──────────────────────────────────────────────
+DevOps --> UC1
+DevOps --> UC2
+DevOps --> UC4
+DevOps --> UC5
+DevOps --> UC6
+
+Architect --> UC2
+Architect --> UC3
+Architect --> UC5
+
+' ──────────────────────────────────────────────
+' «include» Relationships
+' ──────────────────────────────────────────────
+UC1 ..> UC_Auth : <<include>>
+UC1 ..> UC_Validate : <<include>>
+UC4 ..> UC_Auth : <<include>>
+
+' ──────────────────────────────────────────────
+' «extend» Relationship
+' ──────────────────────────────────────────────
+UC_Alert ..> UC4 : <<extend>>\n[3 consecutive\nfailed probes]
+
+' ──────────────────────────────────────────────
+' External Actor Association
+' ──────────────────────────────────────────────
+UC_Alert --> NotifSvc
+
+' ──────────────────────────────────────────────
+' Notes
+' ──────────────────────────────────────────────
+note right of UC_Alert
+  Triggered automatically when
+  health monitoring detects 3
+  consecutive failed health probes.
+  Sends alerts via Email, Slack,
+  and Webhook.
+end note
+
+note bottom of UC_Auth
+  All portal actions
+  require enterprise
+  SSO authentication.
+end note
+
+@enduml
