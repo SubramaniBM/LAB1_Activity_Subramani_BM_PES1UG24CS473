@@ -1,72 +1,96 @@
 @startuml use_case_diagram
 
 skinparam handwritten false
-skinparam monochrome false
-skinparam packageStyle rectangle
 skinparam shadowing false
 skinparam defaultFontName Arial
-skinparam defaultFontSize 12
+skinparam defaultFontSize 11
 
 skinparam actor {
     BackgroundColor #E8F0FE
     BorderColor #1A73E8
+    FontColor #202124
 }
 
 skinparam usecase {
     BackgroundColor #FFFFFF
     BorderColor #1A73E8
-    ArrowColor #3C4043
+    FontColor #202124
 }
 
 skinparam rectangle {
     BackgroundColor #F8F9FA
     BorderColor #5F6368
+    FontColor #202124
+    FontSize 14
+    FontStyle bold
 }
 
-title **Internal Microservice Catalog & Health Portal — UML Use-Case Diagram**\n<size:11>Student: Subramani B M | SRN: PES1UG24CS473 | Section: H | PES University</size>\n
+title **Internal Microservice Catalog & Health Portal**\n**UML Use-Case Diagram**\n<size:11>Subramani B M  |  PES1UG24CS473  |  Section H  |  PES University</size>\n
 
-left to right direction
+top to bottom direction
 
-' ── Actors (Left) ──
+' ══════════════════════════════════════════════
+' ACTORS — Top (DevOps left, Architect right)
+' ══════════════════════════════════════════════
 actor "DevOps Engineer" as DevOps
 actor "System Architect" as Architect
+DevOps -[hidden]right- Architect
 
-' ── System Boundary ──
+' ══════════════════════════════════════════════
+' SYSTEM BOUNDARY
+' ══════════════════════════════════════════════
 rectangle "Internal Microservice Catalog & Health Portal" {
-    
-    usecase "UC-001: Register & Update\nMicroservice" as UC1
-    usecase "UC-002: Search & Filter\nService Catalog" as UC2
-    usecase "UC-003: View Interactive\nDependency Graph" as UC3
-    usecase "UC-004: Monitor Service\nHealth & Availability" as UC4
-    usecase "UC-005: Browse Aggregated\nAPI Documentation" as UC5
-    usecase "UC-006: Configure Alert\nChannels & On-Call" as UC6
-    
-    usecase "UC-007: Authenticate via\nEnterprise SSO" as UC_Auth
-    usecase "UC-008: Validate Service\nMetadata" as UC_Validate
-    usecase "UC-009: Dispatch Downtime\nAlert" as UC_Alert
+
+    ' ── Row 1: Primary Use Cases ──
+    ' Ordered left → right: DevOps-only, Shared, Architect-only
+    ' This minimizes line crossings from actors above.
+    usecase "UC-001\nRegister & Update\nMicroservice" as UC1
+    usecase "UC-006\nConfigure Alert\nChannels" as UC6
+    usecase "UC-004\nMonitor Service\nHealth" as UC4
+    usecase "UC-002\nSearch & Filter\nCatalog" as UC2
+    usecase "UC-005\nBrowse API\nDocumentation" as UC5
+    usecase "UC-003\nView Dependency\nGraph" as UC3
+
+    ' Force horizontal ordering
+    UC1 -[hidden]right- UC6
+    UC6 -[hidden]right- UC4
+    UC4 -[hidden]right- UC2
+    UC2 -[hidden]right- UC5
+    UC5 -[hidden]right- UC3
+
+    ' ── Row 2: Supporting Use Cases ──
+    usecase "UC-008\nValidate Service\nMetadata" as UC_Validate
+    usecase "UC-007\nAuthenticate via\nEnterprise SSO" as UC_Auth
+    usecase "UC-009\nDispatch Downtime\nAlert" as UC_Alert
+
+    UC_Validate -[hidden]right- UC_Auth
+    UC_Auth -[hidden]right- UC_Alert
 }
 
-' ── External Actor (Right) ──
+' ══════════════════════════════════════════════
+' EXTERNAL ACTOR — Bottom
+' ══════════════════════════════════════════════
 actor "Notification Service\n<<external system>>" as NotifSvc
 
-' ── Actor Associations ──
+' ── DevOps Engineer Associations ──
 DevOps -- UC1
-DevOps -- UC2
-DevOps -- UC4
-DevOps -- UC5
 DevOps -- UC6
+DevOps -- UC4
+DevOps -- UC2
+DevOps -- UC5
 
+' ── System Architect Associations ──
 Architect -- UC2
 Architect -- UC3
 Architect -- UC5
 
-' ── Include Relationships ──
-UC1 .> UC_Validate : <<include>>
-UC1 .> UC_Auth : <<include>>
-UC4 .> UC_Auth : <<include>>
+' ── «include» Relationships ──
+UC1 ..> UC_Validate : <<include>>
+UC1 ..> UC_Auth    : <<include>>
+UC4 ..> UC_Auth    : <<include>>
 
-' ── Extend Relationship ──
-UC_Alert .> UC4 : <<extend>>\n[3 consecutive failed probes]
+' ── «extend» Relationship ──
+UC_Alert ..> UC4 : <<extend>>
 
 ' ── External System Association ──
 UC_Alert -- NotifSvc
