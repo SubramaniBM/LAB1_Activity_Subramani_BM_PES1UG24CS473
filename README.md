@@ -2,6 +2,9 @@
 
 **Course:** Software Engineering Lab 1 — Requirements Engineering & UML Use-Case Modelling  
 **Department:** Dept. of CSE, PES University  
+**Student Name:** Subramani B M  
+**SRN:** PES1UG24CS473  
+**Section:** H  
 **Domain:** Developer Tools & IT Operations  
 **Target Stakeholders / Actors:** DevOps Engineer, System Architect  
 
@@ -33,7 +36,7 @@ An enterprise developer portal mapping microservice dependencies, aggregating AP
 
 ```
 .
-├── README.md                      # Project overview & deliverable index
+├── README.md                      # Project overview, student info & deliverable index
 ├── requirements.md                # 5 FRs + 2 NFRs with all 6 required attributes
 ├── use_case_diagram.png           # Rendered UML Use-Case Diagram
 ├── use_case_diagram.puml          # PlantUML source code for Use-Case Diagram

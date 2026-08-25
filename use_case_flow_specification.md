@@ -1,13 +1,20 @@
 # Use-Case Flow Specification
 
-## Use Case: Monitor Service Health (UC-004 / FR-001)
+## Problem Statement #42 — Internal Microservice Catalog & Health Portal
+
+**Student Name:** Subramani B M &nbsp;|&nbsp; **SRN:** PES1UG24CS473 &nbsp;|&nbsp; **Section:** H  
+**Course:** Software Engineering Lab 1 — Department of CSE, PES University  
+
+---
+
+### Use Case: Monitor Service Health (UC-004 / FR-001)
 
 | Field | Detail |
 |-------|--------|
 | **Use-Case ID** | UC-004 |
-| **Use-Case Name** | Monitor Service Health |
+| **Use-Case Name** | Monitor Service Health & Availability |
 | **Primary Actor** | DevOps Engineer |
-| **Supporting Actor** | Notification Service (External) |
+| **Supporting Actor** | Notification Service (External System) |
 | **Related Requirements** | FR-001, FR-004, NFR-002 |
 | **Description** | The system continuously pings registered microservice health endpoints at configurable intervals (default 30 s), computes rolling 24-hour availability, and dispatches downtime alerts when an outage is detected. |
 
@@ -15,13 +22,13 @@
 
 ### Preconditions
 
-1. The DevOps Engineer is authenticated via the enterprise SSO (OAuth 2.0 / SAML).
-2. At least one microservice is registered in the catalog with a valid health-check endpoint URL.
-3. Alert notification channels (email, Slack, webhook) have been configured for the microservice's on-call contacts.
+1. The DevOps Engineer is authenticated via enterprise SSO (OAuth 2.0 / SAML).
+2. At least one microservice is registered in the catalog with a valid HTTPS health-check endpoint URL.
+3. Alert notification channels (Email, Slack, Webhook) have been configured for the microservice's on-call contacts.
 
 ### Postconditions
 
-1. The health status of each monitored microservice is updated and visible on the portal dashboard.
+1. The health status of each monitored microservice is updated and visible on the portal dashboard in real-time.
 2. Rolling 24-hour availability percentages are recalculated and displayed.
 3. If an outage was detected, a downtime event is recorded in the system's incident log and alert notifications have been dispatched.
 
@@ -31,12 +38,12 @@
 
 | Step | Actor / System | Action |
 |------|---------------|--------|
-| 1 | **DevOps Engineer** | Navigates to the Health Monitoring dashboard and selects a microservice (or group) to monitor. |
+| 1 | **DevOps Engineer** | Navigates to the Health Monitoring dashboard and selects a microservice (or service group) to monitor. |
 | 2 | **System** | Validates the engineer's SSO session. *(«include» Authenticate via Enterprise SSO)* |
-| 3 | **System** | Retrieves the health-check endpoint URL and configured ping interval for the selected microservice(s) from the catalog. |
+| 3 | **System** | Retrieves the health-check endpoint URL and configured ping interval (default 30 s) for the selected microservice(s) from the catalog. |
 | 4 | **System** | Sends an HTTPS health probe (GET request over TLS 1.2+) to each microservice's health endpoint. |
 | 5 | **System** | Receives a `200 OK` response within the timeout window (default 5 s). Records the probe result as **Healthy**. |
-| 6 | **System** | Updates the microservice's status on the dashboard to **Healthy** with a timestamp of the last successful probe. |
+| 6 | **System** | Updates the microservice's status on the dashboard to **Healthy** with the timestamp of the last successful probe. |
 | 7 | **System** | Recalculates and displays the rolling 24-hour availability percentage for the microservice. |
 | 8 | **System** | Waits for the configured interval (default 30 s) and returns to **Step 4** for the next probe cycle. |
 | 9 | **DevOps Engineer** | Views real-time health status, availability trends, and historical uptime data on the dashboard. |

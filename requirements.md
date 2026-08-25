@@ -2,6 +2,9 @@
 
 ## Problem Statement #42 — Internal Microservice Catalog & Health Portal
 
+**Student Name:** Subramani B M &nbsp;|&nbsp; **SRN:** PES1UG24CS473 &nbsp;|&nbsp; **Section:** H  
+**Course:** Software Engineering Lab 1 — Department of CSE, PES University  
+
 ---
 
 ## 1. Functional Requirements (FR-001 to FR-005)
