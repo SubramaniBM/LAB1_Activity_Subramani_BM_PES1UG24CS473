@@ -21,7 +21,7 @@ An enterprise developer portal mapping microservice dependencies, aggregating AP
 | # | Deliverable | Format | File Link |
 |---|---|---|---|
 | **1** | **Complete Requirements Table** (FR-001 to FR-005, NFR-001 & NFR-002) with ID, Type, Description, Priority, Acceptance Criteria, and Rationale | Markdown | [requirements.md](requirements.md) |
-| **2** | **UML Use-Case Diagram** (Actors, Use Cases, System Boundary, `«include»` & `«extend»` relationships) | PNG Image & PlantUML Source | [use_case_diagram.png](use_case_diagram.png)<br>[use_case_diagram.puml](use_case_diagram.puml) |
+| **2** | **UML Use-Case Diagram** (Actors, Use Cases, System Boundary, `«include»` & `«extend»` relationships) | draw.io + StarUML + PNG | [use_case_diagram.drawio](use_case_diagram.drawio) (draw.io)<br>[use_case_diagram.mdj](use_case_diagram.mdj) (StarUML)<br>[use_case_diagram.png](use_case_diagram.png) (Preview) |
 | **3** | **Use-Case Flow Specification** (1-Page specification for *Monitor Service Health* with Preconditions, Postconditions, Main Success Scenario, Alternate Flow) | Markdown | [use_case_flow_specification.md](use_case_flow_specification.md) |
 
 ---
@@ -30,15 +30,20 @@ An enterprise developer portal mapping microservice dependencies, aggregating AP
 
 ![UML Use-Case Diagram](use_case_diagram.png)
 
+### Tools Used
+- **draw.io** — Open [use_case_diagram.drawio](use_case_diagram.drawio) at [app.diagrams.net](https://app.diagrams.net/)
+- **StarUML** — Open [use_case_diagram.mdj](use_case_diagram.mdj) in [StarUML](https://staruml.io/)
+
 ---
 
 ## Repository Structure
 
 ```
 .
-├── README.md                      # Project overview, student info & deliverable index
-├── requirements.md                # 5 FRs + 2 NFRs with all 6 required attributes
-├── use_case_diagram.png           # Rendered UML Use-Case Diagram
-├── use_case_diagram.puml          # PlantUML source code for Use-Case Diagram
-└── use_case_flow_specification.md # Detailed flow specification for UC-004
+├── README.md                        # Project overview, student info & deliverable index
+├── requirements.md                  # 5 FRs + 2 NFRs with all 6 required attributes
+├── use_case_diagram.drawio          # UML Use-Case Diagram (draw.io source)
+├── use_case_diagram.mdj             # UML Use-Case Diagram (StarUML source)
+├── use_case_diagram.png             # UML Use-Case Diagram (rendered preview)
+└── use_case_flow_specification.md   # Detailed flow specification for UC-004
 ```

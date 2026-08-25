@@ -1,0 +1,531 @@
+{
+  "_type": "Project",
+  "_id": "AAAAAGSPROJECT00001",
+  "name": "InternalMicroserviceCatalogHealthPortal",
+  "ownedElements": [
+    {
+      "_type": "UMLModel",
+      "_id": "AAAAAGSMODEL000001",
+      "_parent": { "$ref": "AAAAAGSPROJECT00001" },
+      "name": "Model",
+      "ownedElements": [
+        {
+          "_type": "UMLActor",
+          "_id": "AAAAAGSACTOR00001",
+          "_parent": { "$ref": "AAAAAGSMODEL000001" },
+          "name": "DevOps Engineer",
+          "documentation": "Primary actor responsible for registering microservices, monitoring health, configuring alerts, and browsing API documentation."
+        },
+        {
+          "_type": "UMLActor",
+          "_id": "AAAAAGSACTOR00002",
+          "_parent": { "$ref": "AAAAAGSMODEL000001" },
+          "name": "System Architect",
+          "documentation": "Actor responsible for viewing dependency graphs, searching the service catalog, and browsing API documentation."
+        },
+        {
+          "_type": "UMLActor",
+          "_id": "AAAAAGSACTOR00003",
+          "_parent": { "$ref": "AAAAAGSMODEL000001" },
+          "name": "Notification Service",
+          "stereotype": "external system",
+          "documentation": "External system that delivers downtime alert notifications via Email, Slack, and Webhook."
+        },
+        {
+          "_type": "UMLUseCase",
+          "_id": "AAAAAGSUSECASE0001",
+          "_parent": { "$ref": "AAAAAGSMODEL000001" },
+          "name": "UC-001: Register & Update Microservice",
+          "documentation": "The system shall maintain a catalog where DevOps engineers can register new microservices and update existing metadata."
+        },
+        {
+          "_type": "UMLUseCase",
+          "_id": "AAAAAGSUSECASE0002",
+          "_parent": { "$ref": "AAAAAGSMODEL000001" },
+          "name": "UC-002: Search & Filter Service Catalog",
+          "documentation": "The system shall provide searchable and filterable access to all registered microservices and their metadata."
+        },
+        {
+          "_type": "UMLUseCase",
+          "_id": "AAAAAGSUSECASE0003",
+          "_parent": { "$ref": "AAAAAGSMODEL000001" },
+          "name": "UC-003: View Dependency Graph",
+          "documentation": "The system shall render an interactive dependency graph showing upstream and downstream relationships among microservices."
+        },
+        {
+          "_type": "UMLUseCase",
+          "_id": "AAAAAGSUSECASE0004",
+          "_parent": { "$ref": "AAAAAGSMODEL000001" },
+          "name": "UC-004: Monitor Service Health & Availability",
+          "documentation": "The system shall ping microservice health endpoints at 30-second intervals and compute rolling 24-hour service availability percentages."
+        },
+        {
+          "_type": "UMLUseCase",
+          "_id": "AAAAAGSUSECASE0005",
+          "_parent": { "$ref": "AAAAAGSMODEL000001" },
+          "name": "UC-005: Browse API Documentation",
+          "documentation": "The system shall aggregate and display auto-generated API documentation (OpenAPI/Swagger specs) for each microservice."
+        },
+        {
+          "_type": "UMLUseCase",
+          "_id": "AAAAAGSUSECASE0006",
+          "_parent": { "$ref": "AAAAAGSMODEL000001" },
+          "name": "UC-006: Configure Alert Channels",
+          "documentation": "The system shall allow DevOps engineers to configure notification channels (Email, Slack, Webhook) and on-call contacts per microservice."
+        },
+        {
+          "_type": "UMLUseCase",
+          "_id": "AAAAAGSUSECASE0007",
+          "_parent": { "$ref": "AAAAAGSMODEL000001" },
+          "name": "UC-007: Authenticate via Enterprise SSO",
+          "documentation": "The system shall authenticate users via enterprise SSO (OAuth 2.0 / SAML) before granting access to portal features."
+        },
+        {
+          "_type": "UMLUseCase",
+          "_id": "AAAAAGSUSECASE0008",
+          "_parent": { "$ref": "AAAAAGSMODEL000001" },
+          "name": "UC-008: Validate Service Metadata",
+          "documentation": "The system shall validate the completeness and correctness of microservice metadata and health endpoint URLs upon registration."
+        },
+        {
+          "_type": "UMLUseCase",
+          "_id": "AAAAAGSUSECASE0009",
+          "_parent": { "$ref": "AAAAAGSMODEL000001" },
+          "name": "UC-009: Dispatch Downtime Alert",
+          "documentation": "The system shall dispatch real-time downtime alert notifications to on-call contacts when 3 consecutive health probes fail."
+        },
+        {
+          "_type": "UMLAssociation",
+          "_id": "AAAAAGSASSOC000001",
+          "_parent": { "$ref": "AAAAAGSMODEL000001" },
+          "name": "",
+          "end1": {
+            "_type": "UMLAssociationEnd",
+            "_id": "AAAAAGSASSOCEND001",
+            "_parent": { "$ref": "AAAAAGSASSOC000001" },
+            "reference": { "$ref": "AAAAAGSACTOR00001" },
+            "navigable": false
+          },
+          "end2": {
+            "_type": "UMLAssociationEnd",
+            "_id": "AAAAAGSASSOCEND002",
+            "_parent": { "$ref": "AAAAAGSASSOC000001" },
+            "reference": { "$ref": "AAAAAGSUSECASE0001" },
+            "navigable": true
+          }
+        },
+        {
+          "_type": "UMLAssociation",
+          "_id": "AAAAAGSASSOC000002",
+          "_parent": { "$ref": "AAAAAGSMODEL000001" },
+          "name": "",
+          "end1": {
+            "_type": "UMLAssociationEnd",
+            "_id": "AAAAAGSASSOCEND003",
+            "_parent": { "$ref": "AAAAAGSASSOC000002" },
+            "reference": { "$ref": "AAAAAGSACTOR00001" },
+            "navigable": false
+          },
+          "end2": {
+            "_type": "UMLAssociationEnd",
+            "_id": "AAAAAGSASSOCEND004",
+            "_parent": { "$ref": "AAAAAGSASSOC000002" },
+            "reference": { "$ref": "AAAAAGSUSECASE0002" },
+            "navigable": true
+          }
+        },
+        {
+          "_type": "UMLAssociation",
+          "_id": "AAAAAGSASSOC000003",
+          "_parent": { "$ref": "AAAAAGSMODEL000001" },
+          "name": "",
+          "end1": {
+            "_type": "UMLAssociationEnd",
+            "_id": "AAAAAGSASSOCEND005",
+            "_parent": { "$ref": "AAAAAGSASSOC000003" },
+            "reference": { "$ref": "AAAAAGSACTOR00001" },
+            "navigable": false
+          },
+          "end2": {
+            "_type": "UMLAssociationEnd",
+            "_id": "AAAAAGSASSOCEND006",
+            "_parent": { "$ref": "AAAAAGSASSOC000003" },
+            "reference": { "$ref": "AAAAAGSUSECASE0004" },
+            "navigable": true
+          }
+        },
+        {
+          "_type": "UMLAssociation",
+          "_id": "AAAAAGSASSOC000004",
+          "_parent": { "$ref": "AAAAAGSMODEL000001" },
+          "name": "",
+          "end1": {
+            "_type": "UMLAssociationEnd",
+            "_id": "AAAAAGSASSOCEND007",
+            "_parent": { "$ref": "AAAAAGSASSOC000004" },
+            "reference": { "$ref": "AAAAAGSACTOR00001" },
+            "navigable": false
+          },
+          "end2": {
+            "_type": "UMLAssociationEnd",
+            "_id": "AAAAAGSASSOCEND008",
+            "_parent": { "$ref": "AAAAAGSASSOC000004" },
+            "reference": { "$ref": "AAAAAGSUSECASE0005" },
+            "navigable": true
+          }
+        },
+        {
+          "_type": "UMLAssociation",
+          "_id": "AAAAAGSASSOC000005",
+          "_parent": { "$ref": "AAAAAGSMODEL000001" },
+          "name": "",
+          "end1": {
+            "_type": "UMLAssociationEnd",
+            "_id": "AAAAAGSASSOCEND009",
+            "_parent": { "$ref": "AAAAAGSASSOC000005" },
+            "reference": { "$ref": "AAAAAGSACTOR00001" },
+            "navigable": false
+          },
+          "end2": {
+            "_type": "UMLAssociationEnd",
+            "_id": "AAAAAGSASSOCEND010",
+            "_parent": { "$ref": "AAAAAGSASSOC000005" },
+            "reference": { "$ref": "AAAAAGSUSECASE0006" },
+            "navigable": true
+          }
+        },
+        {
+          "_type": "UMLAssociation",
+          "_id": "AAAAAGSASSOC000006",
+          "_parent": { "$ref": "AAAAAGSMODEL000001" },
+          "name": "",
+          "end1": {
+            "_type": "UMLAssociationEnd",
+            "_id": "AAAAAGSASSOCEND011",
+            "_parent": { "$ref": "AAAAAGSASSOC000006" },
+            "reference": { "$ref": "AAAAAGSACTOR00002" },
+            "navigable": false
+          },
+          "end2": {
+            "_type": "UMLAssociationEnd",
+            "_id": "AAAAAGSASSOCEND012",
+            "_parent": { "$ref": "AAAAAGSASSOC000006" },
+            "reference": { "$ref": "AAAAAGSUSECASE0002" },
+            "navigable": true
+          }
+        },
+        {
+          "_type": "UMLAssociation",
+          "_id": "AAAAAGSASSOC000007",
+          "_parent": { "$ref": "AAAAAGSMODEL000001" },
+          "name": "",
+          "end1": {
+            "_type": "UMLAssociationEnd",
+            "_id": "AAAAAGSASSOCEND013",
+            "_parent": { "$ref": "AAAAAGSASSOC000007" },
+            "reference": { "$ref": "AAAAAGSACTOR00002" },
+            "navigable": false
+          },
+          "end2": {
+            "_type": "UMLAssociationEnd",
+            "_id": "AAAAAGSASSOCEND014",
+            "_parent": { "$ref": "AAAAAGSASSOC000007" },
+            "reference": { "$ref": "AAAAAGSUSECASE0003" },
+            "navigable": true
+          }
+        },
+        {
+          "_type": "UMLAssociation",
+          "_id": "AAAAAGSASSOC000008",
+          "_parent": { "$ref": "AAAAAGSMODEL000001" },
+          "name": "",
+          "end1": {
+            "_type": "UMLAssociationEnd",
+            "_id": "AAAAAGSASSOCEND015",
+            "_parent": { "$ref": "AAAAAGSASSOC000008" },
+            "reference": { "$ref": "AAAAAGSACTOR00002" },
+            "navigable": false
+          },
+          "end2": {
+            "_type": "UMLAssociationEnd",
+            "_id": "AAAAAGSASSOCEND016",
+            "_parent": { "$ref": "AAAAAGSASSOC000008" },
+            "reference": { "$ref": "AAAAAGSUSECASE0005" },
+            "navigable": true
+          }
+        },
+        {
+          "_type": "UMLAssociation",
+          "_id": "AAAAAGSASSOC000009",
+          "_parent": { "$ref": "AAAAAGSMODEL000001" },
+          "name": "",
+          "end1": {
+            "_type": "UMLAssociationEnd",
+            "_id": "AAAAAGSASSOCEND017",
+            "_parent": { "$ref": "AAAAAGSASSOC000009" },
+            "reference": { "$ref": "AAAAAGSUSECASE0009" },
+            "navigable": false
+          },
+          "end2": {
+            "_type": "UMLAssociationEnd",
+            "_id": "AAAAAGSASSOCEND018",
+            "_parent": { "$ref": "AAAAAGSASSOC000009" },
+            "reference": { "$ref": "AAAAAGSACTOR00003" },
+            "navigable": true
+          }
+        },
+        {
+          "_type": "UMLInclude",
+          "_id": "AAAAAGSINCLUDE0001",
+          "_parent": { "$ref": "AAAAAGSMODEL000001" },
+          "name": "",
+          "source": { "$ref": "AAAAAGSUSECASE0001" },
+          "target": { "$ref": "AAAAAGSUSECASE0007" }
+        },
+        {
+          "_type": "UMLInclude",
+          "_id": "AAAAAGSINCLUDE0002",
+          "_parent": { "$ref": "AAAAAGSMODEL000001" },
+          "name": "",
+          "source": { "$ref": "AAAAAGSUSECASE0001" },
+          "target": { "$ref": "AAAAAGSUSECASE0008" }
+        },
+        {
+          "_type": "UMLInclude",
+          "_id": "AAAAAGSINCLUDE0003",
+          "_parent": { "$ref": "AAAAAGSMODEL000001" },
+          "name": "",
+          "source": { "$ref": "AAAAAGSUSECASE0004" },
+          "target": { "$ref": "AAAAAGSUSECASE0007" }
+        },
+        {
+          "_type": "UMLExtend",
+          "_id": "AAAAAGSEXTEND00001",
+          "_parent": { "$ref": "AAAAAGSMODEL000001" },
+          "name": "",
+          "source": { "$ref": "AAAAAGSUSECASE0009" },
+          "target": { "$ref": "AAAAAGSUSECASE0004" },
+          "condition": "3 consecutive failed health probes"
+        },
+        {
+          "_type": "UMLUseCaseDiagram",
+          "_id": "AAAAAGSDIAGRAM0001",
+          "_parent": { "$ref": "AAAAAGSMODEL000001" },
+          "name": "Use Case Diagram",
+          "ownedViews": [
+            {
+              "_type": "UMLActorView",
+              "_id": "AAAAAGSVIEW0000010",
+              "_parent": { "$ref": "AAAAAGSDIAGRAM0001" },
+              "model": { "$ref": "AAAAAGSACTOR00001" },
+              "left": 40,
+              "top": 140,
+              "width": 80,
+              "height": 100,
+              "nameLabel": {
+                "_type": "LabelView",
+                "_id": "AAAAAGSVIEWLBL0010",
+                "_parent": { "$ref": "AAAAAGSVIEW0000010" }
+              },
+              "stereotypeLabel": {
+                "_type": "LabelView",
+                "_id": "AAAAAGSVIEWLBL0011",
+                "_parent": { "$ref": "AAAAAGSVIEW0000010" }
+              }
+            },
+            {
+              "_type": "UMLActorView",
+              "_id": "AAAAAGSVIEW0000011",
+              "_parent": { "$ref": "AAAAAGSDIAGRAM0001" },
+              "model": { "$ref": "AAAAAGSACTOR00002" },
+              "left": 40,
+              "top": 380,
+              "width": 80,
+              "height": 100,
+              "nameLabel": {
+                "_type": "LabelView",
+                "_id": "AAAAAGSVIEWLBL0020",
+                "_parent": { "$ref": "AAAAAGSVIEW0000011" }
+              },
+              "stereotypeLabel": {
+                "_type": "LabelView",
+                "_id": "AAAAAGSVIEWLBL0021",
+                "_parent": { "$ref": "AAAAAGSVIEW0000011" }
+              }
+            },
+            {
+              "_type": "UMLActorView",
+              "_id": "AAAAAGSVIEW0000012",
+              "_parent": { "$ref": "AAAAAGSDIAGRAM0001" },
+              "model": { "$ref": "AAAAAGSACTOR00003" },
+              "left": 1080,
+              "top": 500,
+              "width": 80,
+              "height": 100,
+              "nameLabel": {
+                "_type": "LabelView",
+                "_id": "AAAAAGSVIEWLBL0030",
+                "_parent": { "$ref": "AAAAAGSVIEW0000012" }
+              },
+              "stereotypeLabel": {
+                "_type": "LabelView",
+                "_id": "AAAAAGSVIEWLBL0031",
+                "_parent": { "$ref": "AAAAAGSVIEW0000012" }
+              }
+            },
+            {
+              "_type": "UMLUseCaseView",
+              "_id": "AAAAAGSVIEW0000020",
+              "_parent": { "$ref": "AAAAAGSDIAGRAM0001" },
+              "model": { "$ref": "AAAAAGSUSECASE0001" },
+              "left": 220,
+              "top": 120,
+              "width": 200,
+              "height": 70,
+              "nameLabel": {
+                "_type": "LabelView",
+                "_id": "AAAAAGSVIEWLBL0100",
+                "_parent": { "$ref": "AAAAAGSVIEW0000020" }
+              }
+            },
+            {
+              "_type": "UMLUseCaseView",
+              "_id": "AAAAAGSVIEW0000021",
+              "_parent": { "$ref": "AAAAAGSDIAGRAM0001" },
+              "model": { "$ref": "AAAAAGSUSECASE0002" },
+              "left": 300,
+              "top": 290,
+              "width": 200,
+              "height": 70,
+              "nameLabel": {
+                "_type": "LabelView",
+                "_id": "AAAAAGSVIEWLBL0101",
+                "_parent": { "$ref": "AAAAAGSVIEW0000021" }
+              }
+            },
+            {
+              "_type": "UMLUseCaseView",
+              "_id": "AAAAAGSVIEW0000022",
+              "_parent": { "$ref": "AAAAAGSDIAGRAM0001" },
+              "model": { "$ref": "AAAAAGSUSECASE0003" },
+              "left": 800,
+              "top": 290,
+              "width": 200,
+              "height": 70,
+              "nameLabel": {
+                "_type": "LabelView",
+                "_id": "AAAAAGSVIEWLBL0102",
+                "_parent": { "$ref": "AAAAAGSVIEW0000022" }
+              }
+            },
+            {
+              "_type": "UMLUseCaseView",
+              "_id": "AAAAAGSVIEW0000023",
+              "_parent": { "$ref": "AAAAAGSDIAGRAM0001" },
+              "model": { "$ref": "AAAAAGSUSECASE0004" },
+              "left": 740,
+              "top": 120,
+              "width": 200,
+              "height": 70,
+              "nameLabel": {
+                "_type": "LabelView",
+                "_id": "AAAAAGSVIEWLBL0103",
+                "_parent": { "$ref": "AAAAAGSVIEW0000023" }
+              }
+            },
+            {
+              "_type": "UMLUseCaseView",
+              "_id": "AAAAAGSVIEW0000024",
+              "_parent": { "$ref": "AAAAAGSDIAGRAM0001" },
+              "model": { "$ref": "AAAAAGSUSECASE0005" },
+              "left": 560,
+              "top": 290,
+              "width": 200,
+              "height": 70,
+              "nameLabel": {
+                "_type": "LabelView",
+                "_id": "AAAAAGSVIEWLBL0104",
+                "_parent": { "$ref": "AAAAAGSVIEW0000024" }
+              }
+            },
+            {
+              "_type": "UMLUseCaseView",
+              "_id": "AAAAAGSVIEW0000025",
+              "_parent": { "$ref": "AAAAAGSDIAGRAM0001" },
+              "model": { "$ref": "AAAAAGSUSECASE0006" },
+              "left": 480,
+              "top": 120,
+              "width": 200,
+              "height": 70,
+              "nameLabel": {
+                "_type": "LabelView",
+                "_id": "AAAAAGSVIEWLBL0105",
+                "_parent": { "$ref": "AAAAAGSVIEW0000025" }
+              }
+            },
+            {
+              "_type": "UMLUseCaseView",
+              "_id": "AAAAAGSVIEW0000026",
+              "_parent": { "$ref": "AAAAAGSDIAGRAM0001" },
+              "model": { "$ref": "AAAAAGSUSECASE0007" },
+              "left": 500,
+              "top": 490,
+              "width": 200,
+              "height": 70,
+              "nameLabel": {
+                "_type": "LabelView",
+                "_id": "AAAAAGSVIEWLBL0106",
+                "_parent": { "$ref": "AAAAAGSVIEW0000026" }
+              }
+            },
+            {
+              "_type": "UMLUseCaseView",
+              "_id": "AAAAAGSVIEW0000027",
+              "_parent": { "$ref": "AAAAAGSDIAGRAM0001" },
+              "model": { "$ref": "AAAAAGSUSECASE0008" },
+              "left": 260,
+              "top": 490,
+              "width": 200,
+              "height": 70,
+              "nameLabel": {
+                "_type": "LabelView",
+                "_id": "AAAAAGSVIEWLBL0107",
+                "_parent": { "$ref": "AAAAAGSVIEW0000027" }
+              }
+            },
+            {
+              "_type": "UMLUseCaseView",
+              "_id": "AAAAAGSVIEW0000028",
+              "_parent": { "$ref": "AAAAAGSDIAGRAM0001" },
+              "model": { "$ref": "AAAAAGSUSECASE0009" },
+              "left": 740,
+              "top": 490,
+              "width": 200,
+              "height": 70,
+              "nameLabel": {
+                "_type": "LabelView",
+                "_id": "AAAAAGSVIEWLBL0108",
+                "_parent": { "$ref": "AAAAAGSVIEW0000028" }
+              }
+            },
+            {
+              "_type": "UMLUseCaseSubjectView",
+              "_id": "AAAAAGSVIEW0000003",
+              "_parent": { "$ref": "AAAAAGSDIAGRAM0001" },
+              "model": { "$ref": "AAAAAGSMODEL000001" },
+              "left": 190,
+              "top": 80,
+              "width": 850,
+              "height": 520,
+              "nameLabel": {
+                "_type": "LabelView",
+                "_id": "AAAAAGSVIEWLBL0003",
+                "_parent": { "$ref": "AAAAAGSVIEW0000003" }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
