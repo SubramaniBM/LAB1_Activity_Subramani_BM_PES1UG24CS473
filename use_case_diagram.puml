@@ -1,84 +1,74 @@
-@startuml InternalMicroserviceCatalogUseCases
+@startuml use_case_diagram
 
-' ──────────────────────────────────────────────
-' Title
-' ──────────────────────────────────────────────
-title Internal Microservice Catalog & Health Portal\nUML Use-Case Diagram
+skinparam handwritten false
+skinparam monochrome false
+skinparam packageStyle rectangle
+skinparam shadowing false
+skinparam defaultFontName Arial
+skinparam defaultFontSize 12
 
-' ──────────────────────────────────────────────
-' Actors
-' ──────────────────────────────────────────────
-actor "DevOps Engineer" as DevOps
-actor "System Architect" as Architect
-actor "Notification Service\n(External)" as NotifSvc <<external>>
-
-' ──────────────────────────────────────────────
-' System Boundary
-' ──────────────────────────────────────────────
-rectangle "Internal Microservice Catalog & Health Portal" {
-
-    ' ── Primary Use Cases ──
-    usecase "Register / Update\nMicroservice" as UC1
-    usecase "Search Service\nCatalog" as UC2
-    usecase "View Dependency\nGraph" as UC3
-    usecase "Monitor Service\nHealth" as UC4
-    usecase "View API\nDocumentation" as UC5
-    usecase "Configure Alert\nChannels" as UC6
-
-    ' ── Included Use Cases ──
-    usecase "Authenticate via\nEnterprise SSO" as UC_Auth
-    usecase "Validate Service\nMetadata" as UC_Validate
-
-    ' ── Extended Use Case ──
-    usecase "Dispatch Downtime\nAlert" as UC_Alert
-
+skinparam actor {
+    BackgroundColor #E8F0FE
+    BorderColor #1A73E8
 }
 
-' ──────────────────────────────────────────────
-' Actor ↔ Use-Case Associations
-' ──────────────────────────────────────────────
-DevOps --> UC1
-DevOps --> UC2
-DevOps --> UC4
-DevOps --> UC5
-DevOps --> UC6
+skinparam usecase {
+    BackgroundColor #FFFFFF
+    BorderColor #1A73E8
+    ArrowColor #3C4043
+}
 
-Architect --> UC2
-Architect --> UC3
-Architect --> UC5
+skinparam rectangle {
+    BackgroundColor #F8F9FA
+    BorderColor #5F6368
+}
 
-' ──────────────────────────────────────────────
-' «include» Relationships
-' ──────────────────────────────────────────────
-UC1 ..> UC_Auth : <<include>>
-UC1 ..> UC_Validate : <<include>>
-UC4 ..> UC_Auth : <<include>>
+title **Internal Microservice Catalog & Health Portal — UML Use-Case Diagram**\n
 
-' ──────────────────────────────────────────────
-' «extend» Relationship
-' ──────────────────────────────────────────────
-UC_Alert ..> UC4 : <<extend>>\n[3 consecutive\nfailed probes]
+left to right direction
 
-' ──────────────────────────────────────────────
-' External Actor Association
-' ──────────────────────────────────────────────
-UC_Alert --> NotifSvc
+' ── Actors (Left) ──
+actor "DevOps Engineer" as DevOps
+actor "System Architect" as Architect
 
-' ──────────────────────────────────────────────
-' Notes
-' ──────────────────────────────────────────────
-note right of UC_Alert
-  Triggered automatically when
-  health monitoring detects 3
-  consecutive failed health probes.
-  Sends alerts via Email, Slack,
-  and Webhook.
-end note
+' ── System Boundary ──
+rectangle "Internal Microservice Catalog & Health Portal" {
+    
+    usecase "UC-001: Register & Update\nMicroservice" as UC1
+    usecase "UC-002: Search & Filter\nService Catalog" as UC2
+    usecase "UC-003: View Interactive\nDependency Graph" as UC3
+    usecase "UC-004: Monitor Service\nHealth & Availability" as UC4
+    usecase "UC-005: Browse Aggregated\nAPI Documentation" as UC5
+    usecase "UC-006: Configure Alert\nChannels & On-Call" as UC6
+    
+    usecase "UC-007: Authenticate via\nEnterprise SSO" as UC_Auth
+    usecase "UC-008: Validate Service\nMetadata" as UC_Validate
+    usecase "UC-009: Dispatch Downtime\nAlert" as UC_Alert
+}
 
-note bottom of UC_Auth
-  All portal actions
-  require enterprise
-  SSO authentication.
-end note
+' ── External Actor (Right) ──
+actor "Notification Service\n<<external system>>" as NotifSvc
+
+' ── Actor Associations ──
+DevOps -- UC1
+DevOps -- UC2
+DevOps -- UC4
+DevOps -- UC5
+DevOps -- UC6
+
+Architect -- UC2
+Architect -- UC3
+Architect -- UC5
+
+' ── Include Relationships ──
+UC1 .> UC_Validate : <<include>>
+UC1 .> UC_Auth : <<include>>
+UC4 .> UC_Auth : <<include>>
+
+' ── Extend Relationship ──
+UC_Alert .> UC4 : <<extend>>\n[3 consecutive failed probes]
+
+' ── External System Association ──
+UC_Alert -- NotifSvc
 
 @enduml
