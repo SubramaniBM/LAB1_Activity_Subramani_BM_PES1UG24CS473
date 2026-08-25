@@ -49,28 +49,28 @@
           "_type": "UMLUseCase",
           "_id": "AAAAAGSUSECASE0003",
           "_parent": { "$ref": "AAAAAGSMODEL000001" },
-          "name": "UC-003: View Dependency Graph",
+          "name": "UC-003: View Interactive Dependency Graph",
           "documentation": "The system shall render an interactive dependency graph showing upstream and downstream relationships among microservices."
         },
         {
           "_type": "UMLUseCase",
           "_id": "AAAAAGSUSECASE0004",
           "_parent": { "$ref": "AAAAAGSMODEL000001" },
-          "name": "UC-004: Monitor Service Health & Availability",
+          "name": "UC-004: Monitor Microservice Health & Availability",
           "documentation": "The system shall ping microservice health endpoints at 30-second intervals and compute rolling 24-hour service availability percentages."
         },
         {
           "_type": "UMLUseCase",
           "_id": "AAAAAGSUSECASE0005",
           "_parent": { "$ref": "AAAAAGSMODEL000001" },
-          "name": "UC-005: Browse API Documentation",
+          "name": "UC-005: Browse Aggregated API Documentation",
           "documentation": "The system shall aggregate and display auto-generated API documentation (OpenAPI/Swagger specs) for each microservice."
         },
         {
           "_type": "UMLUseCase",
           "_id": "AAAAAGSUSECASE0006",
           "_parent": { "$ref": "AAAAAGSMODEL000001" },
-          "name": "UC-006: Configure Alert Channels",
+          "name": "UC-006: Configure Alert Channels & On-Call",
           "documentation": "The system shall allow DevOps engineers to configure notification channels (Email, Slack, Webhook) and on-call contacts per microservice."
         },
         {
@@ -84,14 +84,14 @@
           "_type": "UMLUseCase",
           "_id": "AAAAAGSUSECASE0008",
           "_parent": { "$ref": "AAAAAGSMODEL000001" },
-          "name": "UC-008: Validate Service Metadata",
+          "name": "UC-008: Validate Service Metadata & Spec",
           "documentation": "The system shall validate the completeness and correctness of microservice metadata and health endpoint URLs upon registration."
         },
         {
           "_type": "UMLUseCase",
           "_id": "AAAAAGSUSECASE0009",
           "_parent": { "$ref": "AAAAAGSMODEL000001" },
-          "name": "UC-009: Dispatch Downtime Alert",
+          "name": "UC-009: Dispatch Real-Time Downtime Alert",
           "documentation": "The system shall dispatch real-time downtime alert notifications to on-call contacts when 3 consecutive health probes fail."
         },
         {
@@ -319,17 +319,12 @@
               "_parent": { "$ref": "AAAAAGSDIAGRAM0001" },
               "model": { "$ref": "AAAAAGSACTOR00001" },
               "left": 40,
-              "top": 140,
+              "top": 240,
               "width": 80,
               "height": 100,
               "nameLabel": {
                 "_type": "LabelView",
                 "_id": "AAAAAGSVIEWLBL0010",
-                "_parent": { "$ref": "AAAAAGSVIEW0000010" }
-              },
-              "stereotypeLabel": {
-                "_type": "LabelView",
-                "_id": "AAAAAGSVIEWLBL0011",
                 "_parent": { "$ref": "AAAAAGSVIEW0000010" }
               }
             },
@@ -338,18 +333,13 @@
               "_id": "AAAAAGSVIEW0000011",
               "_parent": { "$ref": "AAAAAGSDIAGRAM0001" },
               "model": { "$ref": "AAAAAGSACTOR00002" },
-              "left": 40,
-              "top": 380,
+              "left": 1260,
+              "top": 240,
               "width": 80,
               "height": 100,
               "nameLabel": {
                 "_type": "LabelView",
                 "_id": "AAAAAGSVIEWLBL0020",
-                "_parent": { "$ref": "AAAAAGSVIEW0000011" }
-              },
-              "stereotypeLabel": {
-                "_type": "LabelView",
-                "_id": "AAAAAGSVIEWLBL0021",
                 "_parent": { "$ref": "AAAAAGSVIEW0000011" }
               }
             },
@@ -358,18 +348,13 @@
               "_id": "AAAAAGSVIEW0000012",
               "_parent": { "$ref": "AAAAAGSDIAGRAM0001" },
               "model": { "$ref": "AAAAAGSACTOR00003" },
-              "left": 1080,
-              "top": 500,
+              "left": 1260,
+              "top": 640,
               "width": 80,
               "height": 100,
               "nameLabel": {
                 "_type": "LabelView",
                 "_id": "AAAAAGSVIEWLBL0030",
-                "_parent": { "$ref": "AAAAAGSVIEW0000012" }
-              },
-              "stereotypeLabel": {
-                "_type": "LabelView",
-                "_id": "AAAAAGSVIEWLBL0031",
                 "_parent": { "$ref": "AAAAAGSVIEW0000012" }
               }
             },
@@ -379,7 +364,7 @@
               "_parent": { "$ref": "AAAAAGSDIAGRAM0001" },
               "model": { "$ref": "AAAAAGSUSECASE0001" },
               "left": 220,
-              "top": 120,
+              "top": 130,
               "width": 200,
               "height": 70,
               "nameLabel": {
@@ -390,32 +375,32 @@
             },
             {
               "_type": "UMLUseCaseView",
-              "_id": "AAAAAGSVIEW0000021",
+              "_id": "AAAAAGSVIEW0000027",
               "_parent": { "$ref": "AAAAAGSDIAGRAM0001" },
-              "model": { "$ref": "AAAAAGSUSECASE0002" },
-              "left": 300,
-              "top": 290,
+              "model": { "$ref": "AAAAAGSUSECASE0008" },
+              "left": 220,
+              "top": 250,
               "width": 200,
               "height": 70,
               "nameLabel": {
                 "_type": "LabelView",
-                "_id": "AAAAAGSVIEWLBL0101",
-                "_parent": { "$ref": "AAAAAGSVIEW0000021" }
+                "_id": "AAAAAGSVIEWLBL0107",
+                "_parent": { "$ref": "AAAAAGSVIEW0000027" }
               }
             },
             {
               "_type": "UMLUseCaseView",
-              "_id": "AAAAAGSVIEW0000022",
+              "_id": "AAAAAGSVIEW0000025",
               "_parent": { "$ref": "AAAAAGSDIAGRAM0001" },
-              "model": { "$ref": "AAAAAGSUSECASE0003" },
-              "left": 800,
-              "top": 290,
+              "model": { "$ref": "AAAAAGSUSECASE0006" },
+              "left": 220,
+              "top": 370,
               "width": 200,
               "height": 70,
               "nameLabel": {
                 "_type": "LabelView",
-                "_id": "AAAAAGSVIEWLBL0102",
-                "_parent": { "$ref": "AAAAAGSVIEW0000022" }
+                "_id": "AAAAAGSVIEWLBL0105",
+                "_parent": { "$ref": "AAAAAGSVIEW0000025" }
               }
             },
             {
@@ -423,8 +408,8 @@
               "_id": "AAAAAGSVIEW0000023",
               "_parent": { "$ref": "AAAAAGSDIAGRAM0001" },
               "model": { "$ref": "AAAAAGSUSECASE0004" },
-              "left": 740,
-              "top": 120,
+              "left": 220,
+              "top": 490,
               "width": 200,
               "height": 70,
               "nameLabel": {
@@ -435,10 +420,25 @@
             },
             {
               "_type": "UMLUseCaseView",
+              "_id": "AAAAAGSVIEW0000021",
+              "_parent": { "$ref": "AAAAAGSDIAGRAM0001" },
+              "model": { "$ref": "AAAAAGSUSECASE0002" },
+              "left": 580,
+              "top": 150,
+              "width": 200,
+              "height": 70,
+              "nameLabel": {
+                "_type": "LabelView",
+                "_id": "AAAAAGSVIEWLBL0101",
+                "_parent": { "$ref": "AAAAAGSVIEW0000021" }
+              }
+            },
+            {
+              "_type": "UMLUseCaseView",
               "_id": "AAAAAGSVIEW0000024",
               "_parent": { "$ref": "AAAAAGSDIAGRAM0001" },
               "model": { "$ref": "AAAAAGSUSECASE0005" },
-              "left": 560,
+              "left": 580,
               "top": 290,
               "width": 200,
               "height": 70,
@@ -450,26 +450,11 @@
             },
             {
               "_type": "UMLUseCaseView",
-              "_id": "AAAAAGSVIEW0000025",
-              "_parent": { "$ref": "AAAAAGSDIAGRAM0001" },
-              "model": { "$ref": "AAAAAGSUSECASE0006" },
-              "left": 480,
-              "top": 120,
-              "width": 200,
-              "height": 70,
-              "nameLabel": {
-                "_type": "LabelView",
-                "_id": "AAAAAGSVIEWLBL0105",
-                "_parent": { "$ref": "AAAAAGSVIEW0000025" }
-              }
-            },
-            {
-              "_type": "UMLUseCaseView",
               "_id": "AAAAAGSVIEW0000026",
               "_parent": { "$ref": "AAAAAGSDIAGRAM0001" },
               "model": { "$ref": "AAAAAGSUSECASE0007" },
-              "left": 500,
-              "top": 490,
+              "left": 580,
+              "top": 460,
               "width": 200,
               "height": 70,
               "nameLabel": {
@@ -480,17 +465,17 @@
             },
             {
               "_type": "UMLUseCaseView",
-              "_id": "AAAAAGSVIEW0000027",
+              "_id": "AAAAAGSVIEW0000022",
               "_parent": { "$ref": "AAAAAGSDIAGRAM0001" },
-              "model": { "$ref": "AAAAAGSUSECASE0008" },
-              "left": 260,
-              "top": 490,
+              "model": { "$ref": "AAAAAGSUSECASE0003" },
+              "left": 950,
+              "top": 220,
               "width": 200,
               "height": 70,
               "nameLabel": {
                 "_type": "LabelView",
-                "_id": "AAAAAGSVIEWLBL0107",
-                "_parent": { "$ref": "AAAAAGSVIEW0000027" }
+                "_id": "AAAAAGSVIEWLBL0102",
+                "_parent": { "$ref": "AAAAAGSVIEW0000022" }
               }
             },
             {
@@ -498,8 +483,8 @@
               "_id": "AAAAAGSVIEW0000028",
               "_parent": { "$ref": "AAAAAGSDIAGRAM0001" },
               "model": { "$ref": "AAAAAGSUSECASE0009" },
-              "left": 740,
-              "top": 490,
+              "left": 950,
+              "top": 650,
               "width": 200,
               "height": 70,
               "nameLabel": {
@@ -513,10 +498,10 @@
               "_id": "AAAAAGSVIEW0000003",
               "_parent": { "$ref": "AAAAAGSDIAGRAM0001" },
               "model": { "$ref": "AAAAAGSMODEL000001" },
-              "left": 190,
-              "top": 80,
-              "width": 850,
-              "height": 520,
+              "left": 180,
+              "top": 85,
+              "width": 1020,
+              "height": 760,
               "nameLabel": {
                 "_type": "LabelView",
                 "_id": "AAAAAGSVIEWLBL0003",

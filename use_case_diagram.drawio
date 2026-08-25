@@ -1,128 +1,162 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <mxfile host="app.diagrams.net" version="24.7.6">
   <diagram id="use-case-diagram" name="Use-Case Diagram">
-    <mxGraphModel dx="1422" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="900" math="0" shadow="0">
+    <mxGraphModel dx="1600" dy="1100" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1550" pageHeight="1050" math="0" shadow="0">
       <root>
         <mxCell id="0"/>
         <mxCell id="1" parent="0"/>
 
-        <!-- ═══════════ TITLE ═══════════ -->
-        <mxCell id="2" value="&lt;font style=&quot;font-size:16px&quot;&gt;&lt;b&gt;Internal Microservice Catalog &amp;amp; Health Portal&lt;/b&gt;&lt;/font&gt;&lt;br&gt;&lt;b&gt;UML Use-Case Diagram&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:11px&quot;&gt;Subramani B M  |  PES1UG24CS473  |  Section H  |  PES University&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=none;strokeColor=none;" vertex="1" parent="1">
-          <mxGeometry x="330" y="5" width="540" height="70" as="geometry"/>
+        <!-- ═══════════ HEADER / TITLE ═══════════ -->
+        <mxCell id="2" value="&lt;font style=&quot;font-size:18px&quot;&gt;&lt;b&gt;Internal Microservice Catalog &amp;amp; Health Portal&lt;/b&gt;&lt;/font&gt;&lt;br&gt;&lt;font style=&quot;font-size:13px&quot;&gt;&lt;b&gt;UML Use-Case Diagram&lt;/b&gt;&lt;/font&gt;&lt;br&gt;&lt;font style=&quot;font-size:11px&quot;&gt;Subramani B M &amp;nbsp;|&amp;nbsp; PES1UG24CS473 &amp;nbsp;|&amp;nbsp; Section H &amp;nbsp;|&amp;nbsp; PES University&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=none;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="385" y="10" width="600" height="70" as="geometry"/>
         </mxCell>
 
         <!-- ═══════════ SYSTEM BOUNDARY ═══════════ -->
-        <mxCell id="3" value="&lt;font style=&quot;font-size:14px&quot;&gt;&lt;b&gt;Internal Microservice Catalog &amp;amp; Health Portal&lt;/b&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;verticalAlign=top;align=center;spacingTop=8;dashed=0;" vertex="1" parent="1">
-          <mxGeometry x="210" y="90" width="840" height="610" as="geometry"/>
+        <mxCell id="3" value="&lt;font style=&quot;font-size:14px&quot;&gt;&lt;b&gt;Internal Microservice Catalog &amp;amp; Health Portal&lt;/b&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fafafa;strokeColor=#5f6368;verticalAlign=top;align=center;spacingTop=10;dashed=0;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="190" y="90" width="1020" height="780" as="geometry"/>
         </mxCell>
 
         <!-- ═══════════ ACTORS ═══════════ -->
-        <!-- DevOps Engineer (upper-left) -->
-        <mxCell id="10" value="DevOps Engineer" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
-          <mxGeometry x="65" y="155" width="30" height="55" as="geometry"/>
+        <!-- DevOps Engineer (Left side) -->
+        <mxCell id="10" value="&lt;b&gt;DevOps Engineer&lt;/b&gt;" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#e8f0fe;strokeColor=#1a73e8;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="50" y="270" width="40" height="75" as="geometry"/>
         </mxCell>
 
-        <!-- System Architect (lower-left) -->
-        <mxCell id="11" value="System Architect" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
-          <mxGeometry x="65" y="395" width="30" height="55" as="geometry"/>
+        <!-- System Architect (Right side) -->
+        <mxCell id="11" value="&lt;b&gt;System Architect&lt;/b&gt;" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#e8f0fe;strokeColor=#1a73e8;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="1290" y="270" width="40" height="75" as="geometry"/>
         </mxCell>
 
-        <!-- Notification Service (right side) -->
-        <mxCell id="12" value="&lt;font style=&quot;font-size:11px&quot;&gt;Notification Service&lt;br&gt;«external system»&lt;/font&gt;" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
-          <mxGeometry x="1130" y="530" width="30" height="55" as="geometry"/>
+        <!-- Notification Service (Bottom right) -->
+        <mxCell id="12" value="&lt;b&gt;Notification Service&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:10px&quot;&gt;«external system»&lt;/font&gt;" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#fce8e6;strokeColor=#d93025;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="1290" y="675" width="40" height="75" as="geometry"/>
         </mxCell>
 
-        <!-- ═══════════ ROW 1: DEVOPS-ONLY USE CASES ═══════════ -->
-        <mxCell id="20" value="&lt;b&gt;UC-001&lt;/b&gt;&lt;br&gt;Register &amp;amp; Update&lt;br&gt;Microservice" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" vertex="1" parent="1">
-          <mxGeometry x="250" y="130" width="180" height="70" as="geometry"/>
+        <!-- ═══════════ LEFT COLUMN: DEVOPS USE CASES ═══════════ -->
+        <mxCell id="20" value="&lt;b&gt;UC-001&lt;/b&gt;&lt;br&gt;Register &amp;amp; Update&lt;br&gt;Microservice" style="ellipse;whiteSpace=wrap;html=1;fillColor=#e8f0fe;strokeColor=#1a73e8;fontSize=11;strokeWidth=1.2;" vertex="1" parent="1">
+          <mxGeometry x="230" y="140" width="180" height="65" as="geometry"/>
         </mxCell>
 
-        <mxCell id="25" value="&lt;b&gt;UC-006&lt;/b&gt;&lt;br&gt;Configure Alert&lt;br&gt;Channels" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" vertex="1" parent="1">
-          <mxGeometry x="510" y="130" width="180" height="70" as="geometry"/>
+        <mxCell id="27" value="&lt;b&gt;UC-008&lt;/b&gt;&lt;br&gt;Validate Service&lt;br&gt;Metadata &amp;amp; Spec" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f3e8fd;strokeColor=#7627bb;fontSize=11;strokeWidth=1.2;" vertex="1" parent="1">
+          <mxGeometry x="230" y="260" width="180" height="65" as="geometry"/>
         </mxCell>
 
-        <mxCell id="23" value="&lt;b&gt;UC-004&lt;/b&gt;&lt;br&gt;Monitor Service&lt;br&gt;Health" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" vertex="1" parent="1">
-          <mxGeometry x="770" y="130" width="180" height="70" as="geometry"/>
+        <mxCell id="25" value="&lt;b&gt;UC-006&lt;/b&gt;&lt;br&gt;Configure Alert&lt;br&gt;Channels &amp;amp; On-Call" style="ellipse;whiteSpace=wrap;html=1;fillColor=#e8f0fe;strokeColor=#1a73e8;fontSize=11;strokeWidth=1.2;" vertex="1" parent="1">
+          <mxGeometry x="230" y="380" width="180" height="65" as="geometry"/>
         </mxCell>
 
-        <!-- ═══════════ ROW 2: SHARED + ARCHITECT-ONLY USE CASES ═══════════ -->
-        <mxCell id="21" value="&lt;b&gt;UC-002&lt;/b&gt;&lt;br&gt;Search &amp;amp; Filter&lt;br&gt;Service Catalog" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;" vertex="1" parent="1">
-          <mxGeometry x="320" y="305" width="180" height="70" as="geometry"/>
+        <mxCell id="23" value="&lt;b&gt;UC-004&lt;/b&gt;&lt;br&gt;Monitor Microservice&lt;br&gt;Health &amp;amp; Availability" style="ellipse;whiteSpace=wrap;html=1;fillColor=#e8f0fe;strokeColor=#1a73e8;fontSize=11;strokeWidth=1.2;" vertex="1" parent="1">
+          <mxGeometry x="230" y="500" width="180" height="65" as="geometry"/>
         </mxCell>
 
-        <mxCell id="24" value="&lt;b&gt;UC-005&lt;/b&gt;&lt;br&gt;Browse API&lt;br&gt;Documentation" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;" vertex="1" parent="1">
-          <mxGeometry x="580" y="305" width="180" height="70" as="geometry"/>
+        <!-- ═══════════ CENTER COLUMN: SHARED + CROSS-CUTTING ═══════════ -->
+        <mxCell id="21" value="&lt;b&gt;UC-002&lt;/b&gt;&lt;br&gt;Search &amp;amp; Filter&lt;br&gt;Service Catalog" style="ellipse;whiteSpace=wrap;html=1;fillColor=#e6f4ea;strokeColor=#137333;fontSize=11;strokeWidth=1.2;" vertex="1" parent="1">
+          <mxGeometry x="590" y="160" width="190" height="65" as="geometry"/>
         </mxCell>
 
-        <mxCell id="22" value="&lt;b&gt;UC-003&lt;/b&gt;&lt;br&gt;View Dependency&lt;br&gt;Graph" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" vertex="1" parent="1">
-          <mxGeometry x="820" y="305" width="180" height="70" as="geometry"/>
+        <mxCell id="24" value="&lt;b&gt;UC-005&lt;/b&gt;&lt;br&gt;Browse Aggregated&lt;br&gt;API Documentation" style="ellipse;whiteSpace=wrap;html=1;fillColor=#e6f4ea;strokeColor=#137333;fontSize=11;strokeWidth=1.2;" vertex="1" parent="1">
+          <mxGeometry x="590" y="300" width="190" height="65" as="geometry"/>
         </mxCell>
 
-        <!-- ═══════════ ROW 3: SUPPORTING USE CASES ═══════════ -->
-        <mxCell id="27" value="&lt;b&gt;UC-008&lt;/b&gt;&lt;br&gt;Validate Service&lt;br&gt;Metadata" style="ellipse;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=11;" vertex="1" parent="1">
-          <mxGeometry x="280" y="510" width="180" height="70" as="geometry"/>
+        <mxCell id="26" value="&lt;b&gt;UC-007&lt;/b&gt;&lt;br&gt;Authenticate via&lt;br&gt;Enterprise SSO" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f3e8fd;strokeColor=#7627bb;fontSize=11;strokeWidth=1.2;" vertex="1" parent="1">
+          <mxGeometry x="590" y="470" width="190" height="65" as="geometry"/>
         </mxCell>
 
-        <mxCell id="26" value="&lt;b&gt;UC-007&lt;/b&gt;&lt;br&gt;Authenticate via&lt;br&gt;Enterprise SSO" style="ellipse;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=11;" vertex="1" parent="1">
-          <mxGeometry x="520" y="510" width="180" height="70" as="geometry"/>
+        <!-- ═══════════ RIGHT COLUMN: ARCHITECT & ALERT DISPATCH ═══════════ -->
+        <mxCell id="22" value="&lt;b&gt;UC-003&lt;/b&gt;&lt;br&gt;View Interactive&lt;br&gt;Dependency Graph" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fef7e0;strokeColor=#b06000;fontSize=11;strokeWidth=1.2;" vertex="1" parent="1">
+          <mxGeometry x="960" y="230" width="190" height="65" as="geometry"/>
         </mxCell>
 
-        <mxCell id="28" value="&lt;b&gt;UC-009&lt;/b&gt;&lt;br&gt;Dispatch Downtime&lt;br&gt;Alert" style="ellipse;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=11;" vertex="1" parent="1">
-          <mxGeometry x="760" y="510" width="180" height="70" as="geometry"/>
+        <mxCell id="28" value="&lt;b&gt;UC-009&lt;/b&gt;&lt;br&gt;Dispatch Real-Time&lt;br&gt;Downtime Alert" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f3e8fd;strokeColor=#7627bb;fontSize=11;strokeWidth=1.2;" vertex="1" parent="1">
+          <mxGeometry x="960" y="680" width="190" height="65" as="geometry"/>
         </mxCell>
 
-        <!-- ═══════════ DEVOPS ENGINEER ASSOCIATIONS (solid lines) ═══════════ -->
-        <mxCell id="30" style="endArrow=none;html=1;rounded=0;strokeWidth=1.5;" edge="1" source="10" target="20" parent="1">
+        <!-- ═══════════ DEVOPS ASSOCIATIONS ═══════════ -->
+        <mxCell id="30" style="endArrow=none;html=1;rounded=0;strokeWidth=1.4;strokeColor=#202124;" edge="1" source="10" target="20" parent="1">
           <mxGeometry relative="1" as="geometry"/>
         </mxCell>
-        <mxCell id="31" style="endArrow=none;html=1;rounded=0;strokeWidth=1.5;" edge="1" source="10" target="25" parent="1">
+        <mxCell id="31" style="endArrow=none;html=1;rounded=0;strokeWidth=1.4;strokeColor=#202124;" edge="1" source="10" target="25" parent="1">
           <mxGeometry relative="1" as="geometry"/>
         </mxCell>
-        <mxCell id="32" style="endArrow=none;html=1;rounded=0;strokeWidth=1.5;" edge="1" source="10" target="23" parent="1">
+        <mxCell id="32" style="endArrow=none;html=1;rounded=0;strokeWidth=1.4;strokeColor=#202124;" edge="1" source="10" target="23" parent="1">
           <mxGeometry relative="1" as="geometry"/>
         </mxCell>
-        <mxCell id="33" style="endArrow=none;html=1;rounded=0;strokeWidth=1.5;" edge="1" source="10" target="21" parent="1">
+        <mxCell id="33" style="endArrow=none;html=1;rounded=0;strokeWidth=1.4;strokeColor=#202124;" edge="1" source="10" target="21" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="140" y="192"/>
+              <mxPoint x="500" y="192"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="34" style="endArrow=none;html=1;rounded=0;strokeWidth=1.4;strokeColor=#202124;" edge="1" source="10" target="24" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="150" y="332"/>
+              <mxPoint x="490" y="332"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- ═══════════ SYSTEM ARCHITECT ASSOCIATIONS ═══════════ -->
+        <mxCell id="35" style="endArrow=none;html=1;rounded=0;strokeWidth=1.4;strokeColor=#202124;" edge="1" source="11" target="21" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="880" y="192"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="36" style="endArrow=none;html=1;rounded=0;strokeWidth=1.4;strokeColor=#202124;" edge="1" source="11" target="22" parent="1">
           <mxGeometry relative="1" as="geometry"/>
         </mxCell>
-        <mxCell id="34" style="endArrow=none;html=1;rounded=0;strokeWidth=1.5;" edge="1" source="10" target="24" parent="1">
+        <mxCell id="37" style="endArrow=none;html=1;rounded=0;strokeWidth=1.4;strokeColor=#202124;" edge="1" source="11" target="24" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="880" y="332"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- ═══════════ «include» RELATIONSHIPS ═══════════ -->
+        <!-- UC-001 -> UC-008 (Direct vertical) -->
+        <mxCell id="40" value="«include»" style="html=1;dashed=1;endArrow=open;endFill=0;endSize=10;strokeWidth=1.3;fontSize=10;fontStyle=1;strokeColor=#7627bb;" edge="1" source="20" target="27" parent="1">
           <mxGeometry relative="1" as="geometry"/>
         </mxCell>
 
-        <!-- ═══════════ SYSTEM ARCHITECT ASSOCIATIONS (solid lines) ═══════════ -->
-        <mxCell id="35" style="endArrow=none;html=1;rounded=0;strokeWidth=1.5;" edge="1" source="11" target="21" parent="1">
-          <mxGeometry relative="1" as="geometry"/>
+        <!-- UC-001 -> UC-007 (Routed right and down) -->
+        <mxCell id="41" value="«include»" style="html=1;dashed=1;endArrow=open;endFill=0;endSize=10;strokeWidth=1.3;fontSize=10;fontStyle=1;strokeColor=#7627bb;" edge="1" source="20" target="26" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="500" y="172"/>
+              <mxPoint x="500" y="490"/>
+            </Array>
+          </mxGeometry>
         </mxCell>
-        <mxCell id="36" style="endArrow=none;html=1;rounded=0;strokeWidth=1.5;" edge="1" source="11" target="22" parent="1">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
-        <mxCell id="37" style="endArrow=none;html=1;rounded=0;strokeWidth=1.5;" edge="1" source="11" target="24" parent="1">
+
+        <!-- UC-004 -> UC-007 (Direct horizontal) -->
+        <mxCell id="42" value="«include»" style="html=1;dashed=1;endArrow=open;endFill=0;endSize=10;strokeWidth=1.3;fontSize=10;fontStyle=1;strokeColor=#7627bb;" edge="1" source="23" target="26" parent="1">
           <mxGeometry relative="1" as="geometry"/>
         </mxCell>
 
-        <!-- ═══════════ «include» RELATIONSHIPS (dashed, open arrow) ═══════════ -->
-        <mxCell id="40" value="«include»" style="html=1;dashed=1;endArrow=open;endFill=0;endSize=12;strokeWidth=1.5;fontSize=10;fontStyle=1;" edge="1" source="20" target="27" parent="1">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
-        <mxCell id="41" value="«include»" style="html=1;dashed=1;endArrow=open;endFill=0;endSize=12;strokeWidth=1.5;fontSize=10;fontStyle=1;" edge="1" source="20" target="26" parent="1">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
-        <mxCell id="42" value="«include»" style="html=1;dashed=1;endArrow=open;endFill=0;endSize=12;strokeWidth=1.5;fontSize=10;fontStyle=1;" edge="1" source="23" target="26" parent="1">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
-
-        <!-- ═══════════ «extend» RELATIONSHIP (dashed, open arrow) ═══════════ -->
-        <mxCell id="43" value="«extend»&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;[3 consecutive failed probes]&lt;/font&gt;" style="html=1;dashed=1;endArrow=open;endFill=0;endSize=12;strokeWidth=1.5;fontSize=10;fontStyle=1;" edge="1" source="28" target="23" parent="1">
-          <mxGeometry relative="1" as="geometry"/>
+        <!-- ═══════════ «extend» RELATIONSHIP ═══════════ -->
+        <!-- UC-009 -> UC-004 (Routed cleanly along bottom) -->
+        <mxCell id="43" value="«extend»&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;[3 consecutive failed probes]&lt;/font&gt;" style="html=1;dashed=1;endArrow=open;endFill=0;endSize=10;strokeWidth=1.3;fontSize=10;fontStyle=1;strokeColor=#7627bb;" edge="1" source="28" target="23" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1055" y="610"/>
+              <mxPoint x="320" y="610"/>
+            </Array>
+          </mxGeometry>
         </mxCell>
 
-        <!-- ═══════════ EXTERNAL SYSTEM ASSOCIATION ═══════════ -->
-        <mxCell id="44" style="endArrow=none;html=1;rounded=0;strokeWidth=1.5;" edge="1" source="28" target="12" parent="1">
+        <!-- ═══════════ NOTIFICATION SERVICE ASSOCIATION ═══════════ -->
+        <mxCell id="44" style="endArrow=none;html=1;rounded=0;strokeWidth=1.4;strokeColor=#202124;" edge="1" source="28" target="12" parent="1">
           <mxGeometry relative="1" as="geometry"/>
         </mxCell>
 
         <!-- ═══════════ LEGEND ═══════════ -->
-        <mxCell id="50" value="&lt;font style=&quot;font-size:10px&quot;&gt;&lt;b&gt;Legend&lt;/b&gt;&lt;br&gt;Blue = DevOps-only use cases&lt;br&gt;Green = Shared use cases&lt;br&gt;Yellow = Architect-only use cases&lt;br&gt;Purple = Supporting (included/extended)&lt;br&gt;Red = External actor&lt;/font&gt;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=1;fillColor=#f5f5f5;strokeColor=#cccccc;spacingLeft=8;spacingTop=4;spacingRight=8;spacingBottom=4;" vertex="1" parent="1">
-          <mxGeometry x="210" y="710" width="260" height="100" as="geometry"/>
+        <mxCell id="50" value="&lt;font style=&quot;font-size:10px&quot;&gt;&lt;b&gt;Legend&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#1a73e8&quot;&gt;■&lt;/font&gt; Blue = DevOps-focused Use Cases&lt;br&gt;&lt;font color=&quot;#137333&quot;&gt;■&lt;/font&gt; Green = Shared Use Cases (both actors)&lt;br&gt;&lt;font color=&quot;#b06000&quot;&gt;■&lt;/font&gt; Yellow = System Architect-focused Use Case&lt;br&gt;&lt;font color=&quot;#7627bb&quot;&gt;■&lt;/font&gt; Purple = Supporting Use Cases («include» / «extend»)&lt;br&gt;&lt;font color=&quot;#d93025&quot;&gt;■&lt;/font&gt; Red = External System Actor&lt;br&gt;&lt;br&gt;─── Solid line = Actor Association &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; - - - Dashed arrow = Dependency («include» / «extend»)&lt;/font&gt;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=1;fillColor=#ffffff;strokeColor=#dadce0;spacingLeft=10;spacingTop=6;spacingRight=10;spacingBottom=6;" vertex="1" parent="1">
+          <mxGeometry x="230" y="680" width="460" height="130" as="geometry"/>
         </mxCell>
 
       </root>
