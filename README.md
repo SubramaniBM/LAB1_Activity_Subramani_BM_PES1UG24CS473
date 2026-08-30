@@ -1,6 +1,6 @@
 # Problem Statement #42 — Internal Microservice Catalog & Health Portal
 
-**Course:** Software Engineering Lab 1 — Requirements Engineering & UML Use-Case Modelling  
+**Course:** Software Engineering Lab — Requirements Engineering, UML Modelling & Agile Sprint Simulation  
 **Department:** Dept. of CSE, PES University  
 **Student Name:** Subramani B M  
 **SRN:** PES1UG24CS473  
@@ -18,6 +18,8 @@ An enterprise developer portal mapping microservice dependencies, aggregating AP
 
 ## Deliverables Summary
 
+### Lab 1: Requirements Engineering & UML Use-Case Modelling
+
 | # | Deliverable | Format | File Link |
 |---|---|---|---|
 | **0** | **Original Problem Statement** | PDF | [42_SE_Lab1_SE_Problem_Statements.pdf](42_SE_Lab1_SE_Problem_Statements.pdf) |
@@ -26,6 +28,13 @@ An enterprise developer portal mapping microservice dependencies, aggregating AP
 | **3** | **Alternate Flow UML Use-Case Diagram** (Outage Detection, Multi-Channel Alerting & Auto-Recovery Lifecycle) | draw.io + StarUML + PNG | [alternate_flow_use_case_diagram.drawio](alternate_flow_use_case_diagram.drawio) (draw.io)<br>[alternate_flow_use_case_diagram.mdj](alternate_flow_use_case_diagram.mdj) (StarUML)<br>[alternate_flow_use_case_diagram.png](alternate_flow_use_case_diagram.png) (Preview) |
 | **4** | **Use-Case Flow Specification** (1-Page specification for *Monitor Service Health* with Preconditions, Postconditions, Main Success Scenario, Alternate Flow) | Markdown & PDF | [use_case_flow_specification.md](use_case_flow_specification.md)<br>[use_case_flow_specification.pdf](use_case_flow_specification.pdf) *(1-Page Formatted PDF)* |
 | **5** | **Exception Flow Specification** (Fault handling for Network Timeout, Notification Delivery Failure, TLS Violation, Secrets Vault Unreachable, SSO Token Expiry) | Markdown & PDF | [exception_flow_specification.md](exception_flow_specification.md)<br>[exception_flow_specification.pdf](exception_flow_specification.pdf) *(1-Page Formatted PDF)* |
+
+### Lab 2: Agile Backlog Creation & Sprint Simulation in Jira
+
+| # | Deliverable | Format | File Link |
+|---|---|---|---|
+| **6** | **Lab 2 Handout** | PDF | [Lab_2_Jira_Student_Handout.pdf](Lab_2_Jira_Student_Handout.pdf) |
+| **7** | **Agile Backlog & Sprint Plan** (5 Epics, 15 User Stories, Story Points, 2-Sprint Plan, Reflection Answers) | Markdown & PDF | [lab2_agile_backlog_sprint.md](lab2_agile_backlog_sprint.md)<br>[lab2_agile_backlog_sprint.pdf](lab2_agile_backlog_sprint.pdf) *(2-Page Formatted PDF)* |
 
 ---
 
@@ -45,18 +54,21 @@ An enterprise developer portal mapping microservice dependencies, aggregating AP
 
 ```
 .
-├── 42_SE_Lab1_SE_Problem_Statements.pdf      # Original problem statement handout (PS #42)
+├── 42_SE_Lab1_SE_Problem_Statements.pdf      # Lab 1: Original problem statement handout (PS #42)
+├── Lab_2_Jira_Student_Handout.pdf            # Lab 2: Jira handout
 ├── README.md                                 # Project overview, student info & deliverable index
-├── requirements.md                           # Complete Requirements Table (Markdown)
-├── requirements.pdf                          # Complete Requirements Table (1-Page Formatted PDF)
-├── use_case_diagram.drawio                   # Primary UML Use-Case Diagram (draw.io source)
-├── use_case_diagram.mdj                      # Primary UML Use-Case Diagram (StarUML source)
-├── use_case_diagram.png                      # Primary UML Use-Case Diagram (rendered preview)
-├── alternate_flow_use_case_diagram.drawio    # Alternate Flow Use-Case Diagram (draw.io source)
-├── alternate_flow_use_case_diagram.mdj       # Alternate Flow Use-Case Diagram (StarUML source)
-├── alternate_flow_use_case_diagram.png       # Alternate Flow Use-Case Diagram (rendered preview)
-├── use_case_flow_specification.md            # Use-Case Flow Specification (Markdown)
-├── use_case_flow_specification.pdf           # Use-Case Flow Specification (1-Page Formatted PDF)
-├── exception_flow_specification.md           # Exception Flow Specification (Markdown)
-└── exception_flow_specification.pdf          # Exception Flow Specification (1-Page Formatted PDF)
+├── requirements.md                           # Lab 1: Complete Requirements Table (Markdown)
+├── requirements.pdf                          # Lab 1: Complete Requirements Table (PDF)
+├── use_case_diagram.drawio                   # Lab 1: Primary UML Use-Case Diagram (draw.io)
+├── use_case_diagram.mdj                      # Lab 1: Primary UML Use-Case Diagram (StarUML)
+├── use_case_diagram.png                      # Lab 1: Primary UML Use-Case Diagram (PNG)
+├── alternate_flow_use_case_diagram.drawio    # Lab 1: Alternate Flow Diagram (draw.io)
+├── alternate_flow_use_case_diagram.mdj       # Lab 1: Alternate Flow Diagram (StarUML)
+├── alternate_flow_use_case_diagram.png       # Lab 1: Alternate Flow Diagram (PNG)
+├── use_case_flow_specification.md            # Lab 1: Use-Case Flow Specification (Markdown)
+├── use_case_flow_specification.pdf           # Lab 1: Use-Case Flow Specification (PDF)
+├── exception_flow_specification.md           # Lab 1: Exception Flow Specification (Markdown)
+├── exception_flow_specification.pdf          # Lab 1: Exception Flow Specification (PDF)
+├── lab2_agile_backlog_sprint.md              # Lab 2: Epics, User Stories, Sprint Plan, Reflections (Markdown)
+└── lab2_agile_backlog_sprint.pdf             # Lab 2: Epics, User Stories, Sprint Plan, Reflections (PDF)
 ```
