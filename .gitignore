@@ -3,3 +3,7 @@
 
 # PlantUML
 plantuml.jar
+
+# Scratch generators
+scratch/
+scratch_*.py
