@@ -1,136 +1,63 @@
-# Problem Statement #42 — Internal Microservice Catalog & Health Portal
+# MyProject_MicroserviceCatalog
+### Internal Microservice Catalog & Health Portal (Problem Statement #42)
 
-**Course:** Software Engineering Lab — Requirements Engineering, UML Modelling, Agile Jira & Component Architecture  
-**Department:** Dept. of CSE, PES University  
+**Course:** Software Engineering Lab — Department of Computer Science & Engineering, PES University  
 **Student Name:** Subramani B M  
 **SRN:** PES1UG24CS473  
 **Section:** H  
 **Domain:** Developer Tools & IT Operations  
-**Target Stakeholders / Actors:** DevOps Engineer, System Architect  
+**GitHub Repository:** [https://github.com/SubramaniBM/MyProject_MicroserviceCatalog](https://github.com/SubramaniBM/MyProject_MicroserviceCatalog)  
 
 ---
 
-## Problem Context & Overview
+## 🏛️ Individual Project Submission Directory Structure
 
-An enterprise developer portal mapping microservice dependencies, aggregating API documentation, and running automated periodic health check pingers with downtime alerts.
+In accordance with official PES University Software Engineering Lab submission guidelines, all individual project deliverables are structured into standardized submission directories:
+
+| Folder Code | Submission Directory Name | Description & Key Deliverables | Direct Folder Link |
+|:---:|:---|:---|:---:|
+| **a** | **`1-Folder for RE`** | Functional Requirements (FR-001..FR-005), Non-Functional Requirements (NFR-001..NFR-002), **Requirements Traceability Matrix (RTM Table)**, Primary UML Use-Case Diagram, Alternate Flow Diagram (Outage Lifecycle), and Use-Case Flow Specifications. | [`1-Folder for RE/`](1-Folder%20for%20RE/) |
+| **b** | **`2-Folder for Architectural Diagram`** | De-cluttered UML 2.5 Component Diagram (PNG, PDF, Draw.io, StarUML MDJ), 1-Page Architectural Justification for Microservices Architecture, and combined master PDF report (`Lab_3_Component_Modeling_PES1UG24CS473.pdf`). | [`2-Folder for Architectural Diagram/`](2-Folder%20for%20Architectural%20Diagram/) |
+| **c** | **`3-Folder for Project Creational screen shots in GitHub and Jir Tool`** | Visual verification screenshots (`1.png`–`6.png`, `scrum1.png`–`scrum5.png`, `bt1.png`–`bt2.png`), complete exported PDF reports (`Kanban.PDF`, `Scrum.PDF`, `BugReport.PDF`), and Jira workflow reference guides. *(Aliased as `3-Floder...`)* | [`3-Folder for Project Creational screen shots in GitHub and Jir Tool/`](3-Folder%20for%20Project%20Creational%20screen%20shots%20in%20GitHub%20and%20Jir%20Tool/) |
+| **d** | **`4-Folder for SRS and Work Breakdown steps`** | IEEE 830-style Software Requirements Specification (SRS) and 4-Level Work Breakdown Structure (WBS) with Jira issue mapping and story point estimations. | [`4-Folder for SRS and Work Breakdown steps/`](4-Folder%20for%20SRS%20and%20Work%20Breakdown%20steps/) |
+| **e** | **`5-Folder for Github Copilot generated code screen shot or repository link`** | GitHub Copilot AI-assisted engineering prompts, code generation artifacts (health pinger, Neo4j traversal, OpenAPI validator), and external demo repository links. | [`5-Folder for Github Copilot generated code screen shot or repository link/`](5-Folder%20for%20Github%20Copilot%20generated%20code%20screen%20shot%20or%20repository%20link/) |
+| **f** | **`6-Folder for Practicing on Software Testing Tools`** | Software testing methodologies, vibe coding defect remediation protocols, 4-test cases framework, patch validation, and repository reference. | [`6-Folder for Practicing on Software Testing Tools/`](6-Folder%20for%20Practicing%20on%20Software%20Testing%20Tools/) |
 
 ---
 
-## Deliverables Summary
+## 📋 Comprehensive Deliverables Index
 
 ### 📂 Lab 1: Requirements Engineering & UML Use-Case Modelling
+- **Original Handout:** [42_SE_Lab1_SE_Problem_Statements.pdf](42_SE_Lab1_SE_Problem_Statements.pdf)
+- **Requirements & RTM Table:** [requirements.md](1-Folder%20for%20RE/requirements.md) & [requirements.pdf](1-Folder%20for%20RE/requirements.pdf) (Includes FR-001..FR-005, NFR-001..NFR-002, and full Requirements Traceability Matrix)
+- **Primary Use-Case Diagram:** [use_case_diagram.png](1-Folder%20for%20RE/use_case_diagram.png) & [use_case_diagram.drawio](1-Folder%20for%20RE/use_case_diagram.drawio) & [use_case_diagram.mdj](1-Folder%20for%20RE/use_case_diagram.mdj)
+- **Alternate Flow Use-Case Diagram:** [alternate_flow_use_case_diagram.png](1-Folder%20for%20RE/alternate_flow_use_case_diagram.png) & [alternate_flow_use_case_diagram.drawio](1-Folder%20for%20RE/alternate_flow_use_case_diagram.drawio) & [alternate_flow_use_case_diagram.mdj](1-Folder%20for%20RE/alternate_flow_use_case_diagram.mdj)
+- **Use-Case Flow Specification:** [use_case_flow_specification.md](1-Folder%20for%20RE/use_case_flow_specification.md) & [use_case_flow_specification.pdf](1-Folder%20for%20RE/use_case_flow_specification.pdf)
+- **Exception Flow Specification:** [exception_flow_specification.md](1-Folder%20for%20RE/exception_flow_specification.md) & [exception_flow_specification.pdf](1-Folder%20for%20RE/exception_flow_specification.pdf)
 
-| # | Deliverable | Format | File Link |
-|---|---|---|---|
-| **0** | **Original Problem Statement** | PDF | [42_SE_Lab1_SE_Problem_Statements.pdf](42_SE_Lab1_SE_Problem_Statements.pdf) |
-| **1** | **Complete Requirements Table** (FR-001 to FR-005, NFR-001 & NFR-002) with ID, Type, Description, Priority, Acceptance Criteria, and Rationale | Markdown & PDF | [requirements.md](requirements.md)<br>[requirements.pdf](requirements.pdf) *(1-Page Formatted PDF)* |
-| **2** | **UML Use-Case Diagram (Primary System)** (Actors, Use Cases, System Boundary, `«include»` & `«extend»` relationships) | draw.io + StarUML + PNG | [use_case_diagram.drawio](use_case_diagram.drawio) (draw.io)<br>[use_case_diagram.mdj](use_case_diagram.mdj) (StarUML)<br>[use_case_diagram.png](use_case_diagram.png) (Preview) |
-| **3** | **Alternate Flow UML Use-Case Diagram** (Outage Detection, Multi-Channel Alerting & Auto-Recovery Lifecycle) | draw.io + StarUML + PNG | [alternate_flow_use_case_diagram.drawio](alternate_flow_use_case_diagram.drawio) (draw.io)<br>[alternate_flow_use_case_diagram.mdj](alternate_flow_use_case_diagram.mdj) (StarUML)<br>[alternate_flow_use_case_diagram.png](alternate_flow_use_case_diagram.png) (Preview) |
-| **4** | **Use-Case Flow Specification** (1-Page specification for *Monitor Service Health* with Preconditions, Postconditions, Main Success Scenario, Alternate Flow) | Markdown & PDF | [use_case_flow_specification.md](use_case_flow_specification.md)<br>[use_case_flow_specification.pdf](use_case_flow_specification.pdf) *(1-Page Formatted PDF)* |
-| **5** | **Exception Flow Specification** (Fault handling for Network Timeout, Notification Delivery Failure, TLS Violation, Secrets Vault Unreachable, SSO Token Expiry) | Markdown & PDF | [exception_flow_specification.md](exception_flow_specification.md)<br>[exception_flow_specification.pdf](exception_flow_specification.pdf) *(1-Page Formatted PDF)* |
-
----
-
-### 📂 Lab 2: Agile Jira Hands-On Deliverables
-
-| # | Deliverable | Space / Project | File Link |
-|---|---|---|---|
-| **1** | **Kanban Project Deliverable** | `Kanban_BPS#42` (`KBPS42`) | **[Kanban.PDF](Kanban.PDF)** *(3-Page Complete PDF with 6 Screenshots)* |
-| **2** | **Scrum Project Deliverable** | `Scrum_BPS#42` (`SBP42`) | **[Scrum.PDF](Scrum.PDF)** *(3-Page Complete PDF with Burndown Chart & Reflections)* |
-| **3** | **Bug Tracking Deliverable** | `BugTracker_BPS#42` (`BTBPS42`) | **[BugReport.PDF](BugReport.PDF)** *(2-Page Complete PDF with Defect Logs)* |
-| **Ref** | **Lab 2 Reference Docs & Handout** | Markdown & PDF | [kanban_jira_reference.md](kanban_jira_reference.md)<br>[scrum_jira_reference.md](scrum_jira_reference.md)<br>[bugtracker_jira_reference.md](bugtracker_jira_reference.md)<br>[Lab_2_Jira_Student_Handout.pdf](Lab_2_Jira_Student_Handout.pdf) |
-
----
+### 📂 Lab 2: Agile Jira & GitHub Projects
+- **Kanban Implementation:** [Kanban.PDF](3-Folder%20for%20Project%20Creational%20screen%20shots%20in%20GitHub%20and%20Jir%20Tool/Kanban.PDF) & [kanban_jira_reference.md](3-Folder%20for%20Project%20Creational%20screen%20shots%20in%20GitHub%20and%20Jir%20Tool/kanban_jira_reference.md) (`KBPS42`)
+- **Scrum & Sprint Simulation:** [Scrum.PDF](3-Folder%20for%20Project%20Creational%20screen%20shots%20in%20GitHub%20and%20Jir%20Tool/Scrum.PDF) & [scrum_jira_reference.md](3-Folder%20for%20Project%20Creational%20screen%20shots%20in%20GitHub%20and%20Jir%20Tool/scrum_jira_reference.md) (`SBP42`)
+- **Bug Tracking & Defect Management:** [BugReport.PDF](3-Folder%20for%20Project%20Creational%20screen%20shots%20in%20GitHub%20and%20Jir%20Tool/BugReport.PDF) & [bugtracker_jira_reference.md](3-Folder%20for%20Project%20Creational%20screen%20shots%20in%20GitHub%20and%20Jir%20Tool/bugtracker_jira_reference.md) (`BTBPS42`)
+- **Visual Creational Evidence:** Full set of high-res screenshots (`1.png`–`6.png`, `scrum1.png`–`scrum5.png`, `bt1.png`–`bt2.png`) stored in [`3-Folder for Project Creational screen shots in GitHub and Jir Tool/`](3-Folder%20for%20Project%20Creational%20screen%20shots%20in%20GitHub%20and%20Jir%20Tool/)
 
 ### 📂 Lab 3: Component Modelling & Architectural Pattern Selection
-
-| # | Deliverable | Format | File Link | Description |
-|---|---|---|---|---|
-| **1** | **UML Component Diagram** | draw.io + StarUML + PNG + PDF | [component_diagram.png](component_diagram.png)<br>[component_diagram.pdf](component_diagram.pdf)<br>[component_diagram.drawio](component_diagram.drawio)<br>[component_diagram.mdj](component_diagram.mdj) | 6 Core Components, 7 Interfaces (Ball/Socket), Assembly Connectors, Polyglot DBs, EventBus, Secrets Vault. |
-| **2** | **Architectural Justification** | PDF, Word (.docx), Markdown | [architectural_justification.pdf](architectural_justification.pdf) *(1-Page PDF)*<br>[architectural_justification.docx](architectural_justification.docx) *(Word Doc)*<br>[architectural_justification.md](architectural_justification.md) | Technical justification selecting **Microservices Architecture** with 2 scenario reasons, security advantage, and performance benefit. |
-| **3** | **Combined Master Lab 3 Deliverable** | PDF | **[Lab_3_Component_Modeling_PES1UG24CS473.pdf](Lab_3_Component_Modeling_PES1UG24CS473.pdf)** | Complete submission report combining 1-page Justification + High-Res Component Diagram page. |
-| **Folder** | **Submission Directory Standards** | Directories | [`2-Folder for Architectural Diagram`](2-Folder%20for%20Architectural%20Diagram/)<br>[`LAB 3/Problem_Statement_42`](LAB%203/Problem_Statement_42/) | Fully organized folders adhering to official GitHub submission guidelines. |
+- **UML 2.5 Component Diagram (Zero-Collision):** [component_diagram.png](2-Folder%20for%20Architectural%20Diagram/component_diagram.png) & [component_diagram.pdf](2-Folder%20for%20Architectural%20Diagram/component_diagram.pdf) & [component_diagram.drawio](2-Folder%20for%20Architectural%20Diagram/component_diagram.drawio) & [component_diagram.mdj](2-Folder%20for%20Architectural%20Diagram/component_diagram.mdj)
+- **1-Page Architectural Justification:** [architectural_justification.pdf](2-Folder%20for%20Architectural%20Diagram/architectural_justification.pdf) & [architectural_justification.docx](2-Folder%20for%20Architectural%20Diagram/architectural_justification.docx) & [architectural_justification.md](2-Folder%20for%20Architectural%20Diagram/architectural_justification.md)
+- **Combined Submission PDF:** [Lab_3_Component_Modeling_PES1UG24CS473.pdf](2-Folder%20for%20Architectural%20Diagram/Lab_3_Component_Modeling_PES1UG24CS473.pdf) (High-Res Component Diagram + 1-Page Architectural Justification)
 
 ---
 
-## Lab 3 Architecture Selection Summary
+## 🏗️ Architectural Selection Justification
 
 > **"We chose Microservices Architecture (Event-Driven with API Gateway) for the Internal Microservice Catalog & Health Portal System."**
 
-### Component & Interface Specification (Problem Statement #42)
-
-| Component Name | Type / Layer | Provided Interface (Ball) | Required Interface (Socket) | Primary Responsibility |
-|:---|:---|:---|:---|:---|
-| **API Gateway & Auth Service** | Edge / Ingress | `IPortalGateway` (HTTPS / REST) | `ICatalogService`, `IHealthStatus`, `IDependencyGraph`, `IDocViewer`, `IVaultSecret` | TLS termination, SSO OAuth2/SAML validation, RBAC, and client request routing |
-| **Catalog & Registry Service** | Core Domain | `ICatalogService` (gRPC / REST) | `JDBC/SQL` (PostgreSQL) | Searchable microservice registry, metadata management, and elastic indexing |
-| **Health Monitoring Service** | Telemetry Core | `IHealthStatus` (WebSocket / REST) | `IHealthProbe` (HTTPS GET), `IAlertPublisher` (AMQP) | 30s health pings, rolling 24h availability calculation, outage detection (3 fails) |
-| **Dependency Mapping Engine** | Graph Processing | `IDependencyGraph` (GraphQL / JSON) | `Bolt / Cypher` (Neo4j Graph DB), `ICatalogService` | Automated dependency discovery, interactive 200+ node graph generation (<2s SLA) |
-| **Alert & Notification Service** | Notification Dispatch | `IAlertConfig` (REST) | `IEventConsumer` (AMQP), `INotificationChannel` (Slack/SMTP) | Event-driven alert evaluation and guaranteed multi-channel dispatch within 60s (FR-004) |
-| **API Doc Aggregator Service** | Developer Portal | `IDocViewer` (OpenAPI UI / Redoc) | `ISpecFetcher` (Git/HTTP), `Redis Driver` | Ingests, parses, and validates OpenAPI 3.0 specs; serves interactive API sandboxes |
-
----
-
-## UML Component Diagram (Problem Statement #42)
-
-![UML Component Diagram](component_diagram.png)
-
----
-
-## Primary UML Use-Case Diagram (Lab 1)
-
-![Primary UML Use-Case Diagram](use_case_diagram.png)
-
----
-
-## Alternate Flow UML Use-Case Diagram (Lab 1)
-
-![Alternate Flow UML Use-Case Diagram](alternate_flow_use_case_diagram.png)
-
----
-
-## Repository Structure
-
-```
-.
-├── 1-Folder for RE/                              # Official Lab Submission Folder: Requirements Engineering
-│   ├── requirements.md                           # Complete Requirements Table (FR-001 to FR-005, NFR-001 & 002)
-│   ├── requirements.pdf                          # Formatted 1-Page Requirements Table PDF
-│   ├── use_case_diagram.drawio                   # Primary Use-Case Diagram (draw.io)
-│   ├── use_case_diagram.mdj                      # Primary Use-Case Diagram (StarUML)
-│   ├── use_case_diagram.png                      # Primary Use-Case Diagram (PNG)
-│   ├── alternate_flow_use_case_diagram.drawio    # Alternate Flow Diagram (draw.io)
-│   ├── alternate_flow_use_case_diagram.mdj       # Alternate Flow Diagram (StarUML)
-│   ├── alternate_flow_use_case_diagram.png       # Alternate Flow Diagram (PNG)
-│   ├── use_case_flow_specification.md            # Primary Flow Specification (Markdown)
-│   ├── use_case_flow_specification.pdf           # Primary Flow Specification (PDF)
-│   ├── exception_flow_specification.md           # Exception Flow Specification (Markdown)
-│   └── exception_flow_specification.pdf          # Exception Flow Specification (PDF)
-├── 2-Folder for Architectural Diagram/           # Official Lab Submission Folder: Architectural & Component Diagrams
-│   ├── Lab_3_Component_Modeling_PES1UG24CS473.pdf# Master Lab 3 combined submission PDF
-│   ├── component_diagram.drawio                  # UML 2.5 Component Diagram (draw.io XML)
-│   ├── component_diagram.png                     # UML 2.5 Component Diagram (High-Res PNG)
-│   ├── component_diagram.pdf                     # UML 2.5 Component Diagram (Landscape PDF)
-│   ├── component_diagram.mdj                     # UML 2.5 Component Diagram (StarUML Model)
-│   ├── architectural_justification.md            # Technical Architectural Justification (Markdown)
-│   ├── architectural_justification.pdf           # Formatted 1-Page Architectural Justification (PDF)
-│   └── architectural_justification.docx          # Formatted 1-Page Architectural Justification (Word)
-├── LAB 3/                                        # Lab 3 Working Handout & Submissions
-│   ├── Lab_3_Architecture_Student_handout.pdf    # Lab 3 instructions & rubrics
-│   ├── Git Hub Project Submission Details.docx   # Submission nomenclature instructions
-│   └── Problem_Statement_42/                     # Lab 3 Deliverables for Problem Statement #42
-│       ├── Lab_3_Component_Modeling_PES1UG24CS473.pdf
-│       ├── component_diagram.drawio
-│       ├── component_diagram.png
-│       ├── component_diagram.pdf
-│       ├── component_diagram.mdj
-│       ├── architectural_justification.md
-│       ├── architectural_justification.pdf
-│       └── architectural_justification.docx
-├── 42_SE_Lab1_SE_Problem_Statements.pdf          # Lab 1: Original problem statement handout (PS #42)
-├── Lab_2_Jira_Student_Handout.pdf                # Lab 2: Jira student handout
-├── Kanban.PDF                                    # Lab 2 Deliverable 1: Kanban project PDF (6 screenshots)
-├── Scrum.PDF                                     # Lab 2 Deliverable 2: Scrum project PDF (burndown chart + reflections)
-├── BugReport.PDF                                 # Lab 2 Deliverable 3: Bug tracking project PDF
-├── README.md                                     # Master index and student information
-└── Screenshots/                                  # Jira and project screenshot assets
-```
+### Architectural Drivers (Problem Statement #42)
+1. **Workload Isolation & Polling Independence:** Automated 30-second health check polling loops across 200+ services operate in isolation without degrading sub-2.0s graph rendering SLAs or synchronous metadata searches.
+2. **Autonomous Scaling & Fault Containment:** Outages in external alert dispatch channels (e.g., Slack rate limits) are buffered asynchronously via RabbitMQ AMQP topics, preventing cascading portal failures.
+3. **Enterprise Security & Secrets Isolation:** Centralized Ingress API Gateway terminates TLS 1.2+ and enforces OAuth2/SAML SSO, while sensitive health-check credentials and webhook API keys are securely quarantined in HashiCorp Vault.
+4. **Specialized Polyglot Persistence:**
+   - **PostgreSQL:** Service registration schemas and relational metadata.
+   - **TimescaleDB:** Rolling 24-hour time-series availability and latency probe logs.
+   - **Neo4j Graph Database:** Native graph topology traversing 200+ microservice dependencies in sub-2 seconds.
+   - **Redis Cache:** High-speed in-memory store for OpenAPI specifications and fast catalog search.
