@@ -1,6 +1,6 @@
 # Problem Statement #42 — Internal Microservice Catalog & Health Portal
 
-**Course:** Software Engineering Lab — Requirements Engineering, UML Modelling & Agile Jira Workspaces  
+**Course:** Software Engineering Lab — Requirements Engineering, UML Modelling, Agile Jira & Component Architecture  
 **Department:** Dept. of CSE, PES University  
 **Student Name:** Subramani B M  
 **SRN:** PES1UG24CS473  
@@ -31,7 +31,7 @@ An enterprise developer portal mapping microservice dependencies, aggregating AP
 
 ---
 
-### 📂 Lab 2: Agile Jira Hands-On Deliverables (Upload to Google Form)
+### 📂 Lab 2: Agile Jira Hands-On Deliverables
 
 | # | Deliverable | Space / Project | File Link |
 |---|---|---|---|
@@ -42,13 +42,54 @@ An enterprise developer portal mapping microservice dependencies, aggregating AP
 
 ---
 
-## Primary UML Use-Case Diagram
+### 📂 Lab 3: Component Modelling & Architectural Pattern Selection
+
+| # | Deliverable | Format | File Link | Description |
+|---|---|---|---|---|
+| **1** | **UML Component Diagram (PS #42)** | draw.io + StarUML + PNG + PDF | [component_diagram.png](component_diagram.png)<br>[component_diagram.pdf](component_diagram.pdf)<br>[component_diagram.drawio](component_diagram.drawio)<br>[component_diagram.mdj](component_diagram.mdj) | 6 Core Components, 7 Interfaces (Ball/Socket), Assembly Connectors, Polyglot DBs, EventBus, Secrets Vault. |
+| **2** | **Architectural Justification (PS #42)** | PDF, Word (.docx), Markdown | [architectural_justification.pdf](architectural_justification.pdf) *(1-Page PDF)*<br>[architectural_justification.docx](architectural_justification.docx) *(Word Doc)*<br>[architectural_justification.md](architectural_justification.md) | Technical justification selecting **Microservices Architecture** with 2 scenario reasons, security advantage, and performance benefit. |
+| **3** | **Combined Master Lab 3 Deliverable** | PDF | **[Lab_3_Component_Modeling_PES1UG24CS473.pdf](Lab_3_Component_Modeling_PES1UG24CS473.pdf)** | Complete submission report containing 1-page Justification + High-Res Component Diagram page. |
+| **4** | **Coffee Kiosk Scenario Deliverables** *(Handout Example)* | draw.io + PNG + PDF + DOCX + MD | [coffee_kiosk_component_diagram.png](coffee_kiosk_component_diagram.png)<br>[coffee_kiosk_justification.pdf](coffee_kiosk_justification.pdf)<br>[coffee_kiosk_component_diagram.drawio](coffee_kiosk_component_diagram.drawio)<br>[coffee_kiosk_justification.docx](coffee_kiosk_justification.docx) | 5 Components (Touchscreen UI, Order Manager, Payment Service, Printer Controller, Menu DB) + 4 Interfaces. |
+| **Folder** | **Submission Directory Standards** | Directories | [`2-Folder for Architectural Diagram`](2-Folder%20for%20Architectural%20Diagram/)<br>[`LAB 3/Problem_Statement_42`](LAB%203/Problem_Statement_42/)<br>[`LAB 3/Coffee_Kiosk_Scenario`](LAB%203/Coffee_Kiosk_Scenario/) | Fully organized folders adhering to official GitHub submission guidelines. |
+
+---
+
+## Lab 3 Architecture Selection Summary
+
+> **"We chose Microservices Architecture (Event-Driven with API Gateway) for the Internal Microservice Catalog & Health Portal System."**
+
+### Component & Interface Specification (Problem Statement #42)
+
+| Component Name | Type / Layer | Provided Interface (Ball) | Required Interface (Socket) | Primary Responsibility |
+|:---|:---|:---|:---|:---|
+| **API Gateway & Auth Service** | Edge / Ingress | `IPortalGateway` (HTTPS / REST) | `ICatalogService`, `IHealthStatus`, `IDependencyGraph`, `IDocViewer`, `IVaultSecret` | TLS termination, SSO OAuth2/SAML validation, RBAC, and client request routing |
+| **Catalog & Registry Service** | Core Domain | `ICatalogService` (gRPC / REST) | `JDBC/SQL` (PostgreSQL) | Searchable microservice registry, metadata management, and elastic indexing |
+| **Health Monitoring Service** | Telemetry Core | `IHealthStatus` (WebSocket / REST) | `IHealthProbe` (HTTPS GET), `IAlertPublisher` (AMQP) | 30s health pings, rolling 24h availability calculation, outage detection (3 fails) |
+| **Dependency Mapping Engine** | Graph Processing | `IDependencyGraph` (GraphQL / JSON) | `Bolt / Cypher` (Neo4j Graph DB), `ICatalogService` | Automated dependency discovery, interactive 200+ node graph generation (<2s SLA) |
+| **Alert & Notification Service** | Notification Dispatch | `IAlertConfig` (REST) | `IEventConsumer` (AMQP), `INotificationChannel` (Slack/SMTP) | Event-driven alert evaluation and guaranteed multi-channel dispatch within 60s (FR-004) |
+| **API Doc Aggregator Service** | Developer Portal | `IDocViewer` (OpenAPI UI / Redoc) | `ISpecFetcher` (Git/HTTP), `Redis Driver` | Ingests, parses, and validates OpenAPI 3.0 specs; serves interactive API sandboxes |
+
+---
+
+## UML Component Diagram (Problem Statement #42)
+
+![UML Component Diagram](component_diagram.png)
+
+---
+
+## Coffee Kiosk Component Diagram (Handout Scenario)
+
+![Coffee Kiosk Component Diagram](coffee_kiosk_component_diagram.png)
+
+---
+
+## Primary UML Use-Case Diagram (Lab 1)
 
 ![Primary UML Use-Case Diagram](use_case_diagram.png)
 
 ---
 
-## Alternate Flow UML Use-Case Diagram
+## Alternate Flow UML Use-Case Diagram (Lab 1)
 
 ![Alternate Flow UML Use-Case Diagram](alternate_flow_use_case_diagram.png)
 
@@ -58,29 +99,45 @@ An enterprise developer portal mapping microservice dependencies, aggregating AP
 
 ```
 .
-├── 42_SE_Lab1_SE_Problem_Statements.pdf      # Lab 1: Original problem statement handout (PS #42)
-├── Lab_2_Jira_Student_Handout.pdf            # Lab 2: Jira student handout
-├── Kanban.PDF                                # Lab 2 Deliverable 1: Kanban project PDF (6 screenshots)
-├── Scrum.PDF                                 # Lab 2 Deliverable 2: Scrum project PDF (burndown chart + reflections)
-├── BugReport.PDF                             # Lab 2 Deliverable 3: Bug tracking project PDF
-├── README.md                                 # Master index and student information
-├── requirements.md                           # Lab 1: Requirements Table (Markdown)
-├── requirements.pdf                          # Lab 1: Requirements Table (PDF)
-├── use_case_diagram.drawio                   # Lab 1: Primary UML Diagram (draw.io)
-├── use_case_diagram.mdj                      # Lab 1: Primary UML Diagram (StarUML)
-├── use_case_diagram.png                      # Lab 1: Primary UML Diagram (PNG)
-├── alternate_flow_use_case_diagram.drawio    # Lab 1: Alternate Flow Diagram (draw.io)
-├── alternate_flow_use_case_diagram.mdj       # Lab 1: Alternate Flow Diagram (StarUML)
-├── alternate_flow_use_case_diagram.png       # Lab 1: Alternate Flow Diagram (PNG)
-├── use_case_flow_specification.md            # Lab 1: Flow Specification (Markdown)
-├── use_case_flow_specification.pdf           # Lab 1: Flow Specification (PDF)
-├── exception_flow_specification.md           # Lab 1: Exception Flow Specification (Markdown)
-├── exception_flow_specification.pdf          # Lab 1: Exception Flow Specification (PDF)
-├── kanban_jira_reference.md                  # Lab 2: Kanban copy-paste reference
-├── scrum_jira_reference.md                   # Lab 2: Scrum copy-paste reference
-├── bugtracker_jira_reference.md              # Lab 2: Bug tracker copy-paste reference
-└── Screenshots/                              # High-resolution screenshot assets
-    ├── 1.png to 6.png                        # Kanban screenshots
-    ├── scrum1.png to scrum5.png              # Scrum screenshots & Burndown chart
-    └── bt1.png, bt2.png                      # Bug tracker screenshots
+├── 1-Folder for RE/                              # Official Lab Submission Folder: Requirements Engineering
+│   ├── requirements.md                           # Complete Requirements Table (FR-001 to FR-005, NFR-001 & 002)
+│   ├── requirements.pdf                          # Formatted 1-Page Requirements Table PDF
+│   ├── use_case_diagram.drawio                   # Primary Use-Case Diagram (draw.io)
+│   ├── use_case_diagram.mdj                      # Primary Use-Case Diagram (StarUML)
+│   ├── use_case_diagram.png                      # Primary Use-Case Diagram (PNG)
+│   ├── alternate_flow_use_case_diagram.drawio    # Alternate Flow Diagram (draw.io)
+│   ├── alternate_flow_use_case_diagram.mdj       # Alternate Flow Diagram (StarUML)
+│   ├── alternate_flow_use_case_diagram.png       # Alternate Flow Diagram (PNG)
+│   ├── use_case_flow_specification.md            # Primary Flow Specification (Markdown)
+│   ├── use_case_flow_specification.pdf           # Primary Flow Specification (PDF)
+│   ├── exception_flow_specification.md           # Exception Flow Specification (Markdown)
+│   └── exception_flow_specification.pdf          # Exception Flow Specification (PDF)
+├── 2-Folder for Architectural Diagram/           # Official Lab Submission Folder: Architectural & Component Diagrams
+│   ├── Lab_3_Component_Modeling_PES1UG24CS473.pdf# Master Lab 3 combined submission PDF
+│   ├── component_diagram.drawio                  # UML 2.5 Component Diagram (draw.io XML)
+│   ├── component_diagram.png                     # UML 2.5 Component Diagram (High-Res PNG)
+│   ├── component_diagram.pdf                     # UML 2.5 Component Diagram (Landscape PDF)
+│   ├── component_diagram.mdj                     # UML 2.5 Component Diagram (StarUML Model)
+│   ├── architectural_justification.md            # Technical Architectural Justification (Markdown)
+│   ├── architectural_justification.pdf           # Formatted 1-Page Architectural Justification (PDF)
+│   ├── architectural_justification.docx          # Formatted 1-Page Architectural Justification (Word)
+│   ├── coffee_kiosk_component_diagram.drawio     # Coffee Kiosk Component Diagram (draw.io XML)
+│   ├── coffee_kiosk_component_diagram.png        # Coffee Kiosk Component Diagram (PNG)
+│   ├── coffee_kiosk_component_diagram.pdf        # Coffee Kiosk Component Diagram (PDF)
+│   ├── coffee_kiosk_component_diagram.mdj        # Coffee Kiosk Component Diagram (StarUML Model)
+│   ├── coffee_kiosk_justification.md             # Coffee Kiosk Justification (Markdown)
+│   ├── coffee_kiosk_justification.pdf            # Coffee Kiosk Justification (PDF)
+│   └── coffee_kiosk_justification.docx           # Coffee Kiosk Justification (Word)
+├── LAB 3/                                        # Lab 3 Working Handout & Submissions
+│   ├── Lab_3_Architecture_Student_handout.pdf    # Lab 3 instructions & rubrics
+│   ├── Git Hub Project Submission Details.docx   # Submission nomenclature instructions
+│   ├── Problem_Statement_42/                     # Lab 3 Deliverables for Problem Statement #42
+│   └── Coffee_Kiosk_Scenario/                    # Lab 3 Deliverables for Coffee Kiosk Scenario
+├── 42_SE_Lab1_SE_Problem_Statements.pdf          # Lab 1: Original problem statement handout (PS #42)
+├── Lab_2_Jira_Student_Handout.pdf                # Lab 2: Jira student handout
+├── Kanban.PDF                                    # Lab 2 Deliverable 1: Kanban project PDF (6 screenshots)
+├── Scrum.PDF                                     # Lab 2 Deliverable 2: Scrum project PDF (burndown chart + reflections)
+├── BugReport.PDF                                 # Lab 2 Deliverable 3: Bug tracking project PDF
+├── README.md                                     # Master index and student information
+└── Screenshots/                                  # Jira and project screenshot assets
 ```

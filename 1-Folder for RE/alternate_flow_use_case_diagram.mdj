@@ -1,0 +1,247 @@
+{
+  "_type": "Project",
+  "_id": "AAAAAGSALTPROJECT0001",
+  "name": "AlternateFlowUseCaseDiagram",
+  "ownedElements": [
+    {
+      "_type": "UMLModel",
+      "_id": "AAAAAGSALTMODEL0001",
+      "_parent": { "$ref": "AAAAAGSALTPROJECT0001" },
+      "name": "AlternateFlowModel",
+      "ownedElements": [
+        {
+          "_type": "UMLActor",
+          "_id": "AAAAAGSALTACTOR0001",
+          "_parent": { "$ref": "AAAAAGSALTMODEL0001" },
+          "name": "DevOps Engineer",
+          "documentation": "Actor monitoring health metrics and receiving downtime alerts during outages."
+        },
+        {
+          "_type": "UMLActor",
+          "_id": "AAAAAGSALTACTOR0002",
+          "_parent": { "$ref": "AAAAAGSALTMODEL0001" },
+          "name": "Notification Service",
+          "stereotype": "external system",
+          "documentation": "External system delivering outage and recovery notifications."
+        },
+        {
+          "_type": "UMLUseCase",
+          "_id": "AAAAAGSALTUC0001",
+          "_parent": { "$ref": "AAAAAGSALTMODEL0001" },
+          "name": "UC-004: Monitor Microservice Health (Base Flow)",
+          "documentation": "Base monitoring flow executing periodic health checks."
+        },
+        {
+          "_type": "UMLUseCase",
+          "_id": "AAAAAGSALTUC0002",
+          "_parent": { "$ref": "AAAAAGSALTMODEL0001" },
+          "name": "UC-007: Authenticate via Enterprise SSO",
+          "documentation": "Validates user session prior to portal operations."
+        },
+        {
+          "_type": "UMLUseCase",
+          "_id": "AAAAAGSALTUC0003",
+          "_parent": { "$ref": "AAAAAGSALTMODEL0001" },
+          "name": "UC-004a: Detect Probe Failure & Increment Counter",
+          "documentation": "Handles single probe failures and failure counter increments."
+        },
+        {
+          "_type": "UMLUseCase",
+          "_id": "AAAAAGSALTUC0004",
+          "_parent": { "$ref": "AAAAAGSALTMODEL0001" },
+          "name": "UC-004b: Mark Service Down & Log Outage Incident",
+          "documentation": "Logs outage incident upon 3 consecutive probe failures."
+        },
+        {
+          "_type": "UMLUseCase",
+          "_id": "AAAAAGSALTUC0005",
+          "_parent": { "$ref": "AAAAAGSALTMODEL0001" },
+          "name": "UC-009: Dispatch Real-Time Downtime Alert",
+          "documentation": "Dispatches downtime alerts to on-call contacts."
+        },
+        {
+          "_type": "UMLUseCase",
+          "_id": "AAAAAGSALTUC0006",
+          "_parent": { "$ref": "AAAAAGSALTMODEL0001" },
+          "name": "UC-009a: Deliver Multi-Channel Notifications",
+          "documentation": "Delivers alerts across Email, Slack, and Webhook."
+        },
+        {
+          "_type": "UMLUseCase",
+          "_id": "AAAAAGSALTUC0007",
+          "_parent": { "$ref": "AAAAAGSALTMODEL0001" },
+          "name": "UC-004c: Analyze Incident & Dependency Impact",
+          "documentation": "DevOps analyzes blast radius and incident root cause."
+        },
+        {
+          "_type": "UMLUseCase",
+          "_id": "AAAAAGSALTUC0008",
+          "_parent": { "$ref": "AAAAAGSALTMODEL0001" },
+          "name": "UC-004d: Detect Probe Success & Calculate Downtime",
+          "documentation": "Detects recovery probe (200 OK) and computes total outage duration."
+        },
+        {
+          "_type": "UMLUseCase",
+          "_id": "AAAAAGSALTUC0009",
+          "_parent": { "$ref": "AAAAAGSALTMODEL0001" },
+          "name": "UC-004e: Mark Service Healthy & Reset Failure Counter",
+          "documentation": "Restores service status to healthy and resets failure counter to 0."
+        },
+        {
+          "_type": "UMLUseCase",
+          "_id": "AAAAAGSALTUC0010",
+          "_parent": { "$ref": "AAAAAGSALTMODEL0001" },
+          "name": "UC-009b: Dispatch Service Recovery Notification",
+          "documentation": "Sends recovery notification to on-call team."
+        },
+        {
+          "_type": "UMLAssociation",
+          "_id": "AAAAAGSALTASSOC001",
+          "_parent": { "$ref": "AAAAAGSALTMODEL0001" },
+          "name": "",
+          "end1": {
+            "_type": "UMLAssociationEnd",
+            "_id": "AAAAAGSALTASSOCEND001",
+            "_parent": { "$ref": "AAAAAGSALTASSOC001" },
+            "reference": { "$ref": "AAAAAGSALTACTOR0001" },
+            "navigable": false
+          },
+          "end2": {
+            "_type": "UMLAssociationEnd",
+            "_id": "AAAAAGSALTASSOCEND002",
+            "_parent": { "$ref": "AAAAAGSALTASSOC001" },
+            "reference": { "$ref": "AAAAAGSALTUC0001" },
+            "navigable": true
+          }
+        },
+        {
+          "_type": "UMLAssociation",
+          "_id": "AAAAAGSALTASSOC002",
+          "_parent": { "$ref": "AAAAAGSALTMODEL0001" },
+          "name": "",
+          "end1": {
+            "_type": "UMLAssociationEnd",
+            "_id": "AAAAAGSALTASSOCEND003",
+            "_parent": { "$ref": "AAAAAGSALTASSOC002" },
+            "reference": { "$ref": "AAAAAGSALTACTOR0001" },
+            "navigable": false
+          },
+          "end2": {
+            "_type": "UMLAssociationEnd",
+            "_id": "AAAAAGSALTASSOCEND004",
+            "_parent": { "$ref": "AAAAAGSALTASSOC002" },
+            "reference": { "$ref": "AAAAAGSALTUC0007" },
+            "navigable": true
+          }
+        },
+        {
+          "_type": "UMLAssociation",
+          "_id": "AAAAAGSALTASSOC003",
+          "_parent": { "$ref": "AAAAAGSALTMODEL0001" },
+          "name": "",
+          "end1": {
+            "_type": "UMLAssociationEnd",
+            "_id": "AAAAAGSALTASSOCEND005",
+            "_parent": { "$ref": "AAAAAGSALTASSOC003" },
+            "reference": { "$ref": "AAAAAGSALTUC0006" },
+            "navigable": false
+          },
+          "end2": {
+            "_type": "UMLAssociationEnd",
+            "_id": "AAAAAGSALTASSOCEND006",
+            "_parent": { "$ref": "AAAAAGSALTASSOC003" },
+            "reference": { "$ref": "AAAAAGSALTACTOR0002" },
+            "navigable": true
+          }
+        },
+        {
+          "_type": "UMLAssociation",
+          "_id": "AAAAAGSALTASSOC004",
+          "_parent": { "$ref": "AAAAAGSALTMODEL0001" },
+          "name": "",
+          "end1": {
+            "_type": "UMLAssociationEnd",
+            "_id": "AAAAAGSALTASSOCEND007",
+            "_parent": { "$ref": "AAAAAGSALTASSOC004" },
+            "reference": { "$ref": "AAAAAGSALTUC0010" },
+            "navigable": false
+          },
+          "end2": {
+            "_type": "UMLAssociationEnd",
+            "_id": "AAAAAGSALTASSOCEND008",
+            "_parent": { "$ref": "AAAAAGSALTASSOC004" },
+            "reference": { "$ref": "AAAAAGSALTACTOR0002" },
+            "navigable": true
+          }
+        },
+        {
+          "_type": "UMLInclude",
+          "_id": "AAAAAGSALTINC0001",
+          "_parent": { "$ref": "AAAAAGSALTMODEL0001" },
+          "name": "",
+          "source": { "$ref": "AAAAAGSALTUC0001" },
+          "target": { "$ref": "AAAAAGSALTUC0002" }
+        },
+        {
+          "_type": "UMLExtend",
+          "_id": "AAAAAGSALTEXT0001",
+          "_parent": { "$ref": "AAAAAGSALTMODEL0001" },
+          "name": "",
+          "source": { "$ref": "AAAAAGSALTUC0003" },
+          "target": { "$ref": "AAAAAGSALTUC0001" },
+          "condition": "Single probe failure"
+        },
+        {
+          "_type": "UMLInclude",
+          "_id": "AAAAAGSALTINC0002",
+          "_parent": { "$ref": "AAAAAGSALTMODEL0001" },
+          "name": "",
+          "source": { "$ref": "AAAAAGSALTUC0003" },
+          "target": { "$ref": "AAAAAGSALTUC0004" }
+        },
+        {
+          "_type": "UMLExtend",
+          "_id": "AAAAAGSALTEXT0002",
+          "_parent": { "$ref": "AAAAAGSALTMODEL0001" },
+          "name": "",
+          "source": { "$ref": "AAAAAGSALTUC0005" },
+          "target": { "$ref": "AAAAAGSALTUC0004" },
+          "condition": "3 consecutive failed probes"
+        },
+        {
+          "_type": "UMLInclude",
+          "_id": "AAAAAGSALTINC0003",
+          "_parent": { "$ref": "AAAAAGSALTMODEL0001" },
+          "name": "",
+          "source": { "$ref": "AAAAAGSALTUC0005" },
+          "target": { "$ref": "AAAAAGSALTUC0006" }
+        },
+        {
+          "_type": "UMLExtend",
+          "_id": "AAAAAGSALTEXT0003",
+          "_parent": { "$ref": "AAAAAGSALTMODEL0001" },
+          "name": "",
+          "source": { "$ref": "AAAAAGSALTUC0008" },
+          "target": { "$ref": "AAAAAGSALTUC0007" },
+          "condition": "Probe 200 OK received"
+        },
+        {
+          "_type": "UMLInclude",
+          "_id": "AAAAAGSALTINC0004",
+          "_parent": { "$ref": "AAAAAGSALTMODEL0001" },
+          "name": "",
+          "source": { "$ref": "AAAAAGSALTUC0008" },
+          "target": { "$ref": "AAAAAGSALTUC0009" }
+        },
+        {
+          "_type": "UMLInclude",
+          "_id": "AAAAAGSALTINC0005",
+          "_parent": { "$ref": "AAAAAGSALTMODEL0001" },
+          "name": "",
+          "source": { "$ref": "AAAAAGSALTUC0009" },
+          "target": { "$ref": "AAAAAGSALTUC0010" }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "_type": "Project",
+  "_id": "AAAAAGSCOFFEE_PROJECT_001",
+  "name": "CoffeeKiosk_ComponentModeling",
+  "ownedElements": [
+    {
+      "_type": "UMLModel",
+      "_id": "AAAAAGSCOFFEE_MODEL_001",
+      "_parent": { "$ref": "AAAAAGSCOFFEE_PROJECT_001" },
+      "name": "CoffeeKiosk_Architecture",
+      "ownedElements": [
+        {
+          "_type": "UMLComponent",
+          "_id": "COMP_KIOSK_UI",
+          "_parent": { "$ref": "AAAAAGSCOFFEE_MODEL_001" },
+          "name": "Touchscreen UI Component",
+          "documentation": "Presentation component handling customer touch inputs for beverage selection (Espresso, Latte, Americano), size options, and checkout flow."
+        },
+        {
+          "_type": "UMLComponent",
+          "_id": "COMP_KIOSK_OM",
+          "_parent": { "$ref": "AAAAAGSCOFFEE_MODEL_001" },
+          "name": "Order Manager Component",
+          "documentation": "Core business logic component orchestrating beverage configuration, price calculation, transaction lifecycle, and post-payment dispatch."
+        },
+        {
+          "_type": "UMLComponent",
+          "_id": "COMP_KIOSK_PAYMENT",
+          "_parent": { "$ref": "AAAAAGSCOFFEE_MODEL_001" },
+          "name": "Payment Service Component",
+          "documentation": "Payment gateway and credit card processing component communicating securely with card reader hardware and financial clearing networks."
+        },
+        {
+          "_type": "UMLComponent",
+          "_id": "COMP_KIOSK_PRINTER",
+          "_parent": { "$ref": "AAAAAGSCOFFEE_MODEL_001" },
+          "name": "Receipt Printer Controller Component",
+          "documentation": "Hardware controller handling ESC/POS print commands and status monitoring for thermal receipt printing."
+        },
+        {
+          "_type": "UMLComponent",
+          "_id": "COMP_KIOSK_DB",
+          "_parent": { "$ref": "AAAAAGSCOFFEE_MODEL_001" },
+          "name": "Menu & Pricing Database Component",
+          "documentation": "Embedded datastore containing coffee recipes, sizes, prices, and tax rate tables."
+        },
+        {
+          "_type": "UMLInterface",
+          "_id": "IFACE_KIOSK_ORDER",
+          "_parent": { "$ref": "AAAAAGSCOFFEE_MODEL_001" },
+          "name": "IOrderService"
+        },
+        {
+          "_type": "UMLInterface",
+          "_id": "IFACE_KIOSK_PAYMENT",
+          "_parent": { "$ref": "AAAAAGSCOFFEE_MODEL_001" },
+          "name": "IPaymentProcessor"
+        },
+        {
+          "_type": "UMLInterface",
+          "_id": "IFACE_KIOSK_PRINTER",
+          "_parent": { "$ref": "AAAAAGSCOFFEE_MODEL_001" },
+          "name": "IPrinterDriver"
+        },
+        {
+          "_type": "UMLInterface",
+          "_id": "IFACE_KIOSK_MENU",
+          "_parent": { "$ref": "AAAAAGSCOFFEE_MODEL_001" },
+          "name": "IMenuData"
+        },
+        {
+          "_type": "UMLComponentDiagram",
+          "_id": "DIAG_KIOSK_COMP_001",
+          "_parent": { "$ref": "AAAAAGSCOFFEE_MODEL_001" },
+          "name": "CoffeeKiosk_ComponentDiagram",
+          "visible": true
+        }
+      ]
+    }
+  ]
+}

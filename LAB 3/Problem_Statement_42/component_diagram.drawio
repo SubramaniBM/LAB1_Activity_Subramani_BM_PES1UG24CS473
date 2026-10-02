@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" version="24.7.6">
+  <diagram id="component-diagram-ps42" name="UML Component Diagram - PS#42">
+    <mxGraphModel dx="1600" dy="1100" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1700" pageHeight="1200" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <!-- ═══════════════════════════════════════════════════════════════
+             HEADER / TITLE BLOCK
+             ═══════════════════════════════════════════════════════════════ -->
+        <mxCell id="header_box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1e293b;strokeColor=#0f172a;strokeWidth=2;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="20" width="1580" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="header_text" value="&lt;font color=&quot;#ffffff&quot; style=&quot;font-size:20px&quot;&gt;&lt;b&gt;Internal Microservice Catalog &amp;amp; Health Portal (Problem Statement #42)&lt;/b&gt;&lt;/font&gt;&lt;br&gt;&lt;font color=&quot;#38bdf8&quot; style=&quot;font-size:14px&quot;&gt;&lt;b&gt;UML 2.5 Component Diagram — Microservices Architectural Style&lt;/b&gt;&lt;/font&gt;&lt;br&gt;&lt;font color=&quot;#cbd5e1&quot; style=&quot;font-size:12px&quot;&gt;Student: &lt;b&gt;Subramani B M&lt;/b&gt; &amp;nbsp;|&amp;nbsp; SRN: &lt;b&gt;PES1UG24CS473&lt;/b&gt; &amp;nbsp;|&amp;nbsp; Section: &lt;b&gt;H&lt;/b&gt; &amp;nbsp;|&amp;nbsp; Dept. of CSE, PES University&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=none;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="80" y="25" width="1540" height="80" as="geometry"/>
+        </mxCell>
+
+        <!-- ═══════════════════════════════════════════════════════════════
+             SYSTEM BOUNDARY: INTERNAL SYSTEM
+             ═══════════════════════════════════════════════════════════════ -->
+        <mxCell id="sys_boundary" value="&lt;font style=&quot;font-size:14px&quot;&gt;&lt;b&gt;System Boundary: Internal Microservice Catalog &amp;amp; Health Portal Subsystem&lt;/b&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8fafc;strokeColor=#64748b;strokeWidth=2;strokeDashed=1;verticalAlign=top;align=left;spacingLeft=25;spacingTop=15;dashPattern=6 4;" vertex="1" parent="1">
+          <mxGeometry x="270" y="140" width="1120" height="980" as="geometry"/>
+        </mxCell>
+
+        <!-- ═══════════════════════════════════════════════════════════════
+             EXTERNAL ACTORS / CLIENTS (LEFT SIDE)
+             ═══════════════════════════════════════════════════════════════ -->
+        <mxCell id="actor_devops" value="&lt;b&gt;DevOps Engineer&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:10px;color:#64748b;&quot;&gt;Actor / Browser UI&lt;/font&gt;" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#e0f2fe;strokeColor=#0284c7;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="80" y="240" width="50" height="85" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="actor_architect" value="&lt;b&gt;System Architect&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:10px;color:#64748b;&quot;&gt;Actor / Browser UI&lt;/font&gt;" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#e0f2fe;strokeColor=#0284c7;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="80" y="440" width="50" height="85" as="geometry"/>
+        </mxCell>
+
+        <!-- ═══════════════════════════════════════════════════════════════
+             COMPONENT 1: API GATEWAY & AUTHENTICATION SERVICE
+             ═══════════════════════════════════════════════════════════════ -->
+        <mxCell id="comp_gateway" value="&lt;p style=&quot;margin:0;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;&amp;laquo;component&amp;raquo;&lt;/b&gt;&lt;br&gt;&lt;b style=&quot;font-size:13px;&quot;&gt;API Gateway &amp;amp;&lt;br&gt;Authentication Service&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-color:#bae6fd;&quot;&gt;&lt;p style=&quot;margin:0;margin-left:8px;font-size:10px;text-align:left;color:#0369a1;&quot;&gt;• Reverse Proxy &amp;amp; Route Dispatcher&lt;br&gt;• SSO / OAuth 2.0 / SAML Auth&lt;br&gt;• TLS 1.2+ Termination &amp;amp; RBAC&lt;/p&gt;" style="html=1;dropTarget=0;whiteSpace=wrap;fillColor=#f0f9ff;strokeColor=#0284c7;strokeWidth=1.8;shape=component;align=center;spacingTop=6;" vertex="1" parent="1">
+          <mxGeometry x="320" y="290" width="220" height="150" as="geometry"/>
+        </mxCell>
+
+        <!-- Provided Interface for Gateway: IPortalGateway -->
+        <mxCell id="iface_portal_provided" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#ffffff;strokeColor=#0284c7;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="235" y="355" width="20" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="lbl_iface_portal" value="&lt;b&gt;IPortalGateway&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:10px;color:#475569;&quot;&gt;HTTPS / REST / JSON&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=bottom;fontSize=11;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="175" y="315" width="140" height="35" as="geometry"/>
+        </mxCell>
+        <mxCell id="conn_gateway_prov" value="" style="endArrow=none;html=1;strokeWidth=1.8;strokeColor=#0284c7;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="iface_portal_provided" target="comp_gateway">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <!-- Actor Connections to IPortalGateway -->
+        <mxCell id="edge_devops_gw" value="" style="endArrow=open;dashed=1;html=1;strokeWidth=1.5;strokeColor=#0284c7;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endFill=0;" edge="1" parent="1" source="actor_devops" target="iface_portal_provided">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge_arch_gw" value="" style="endArrow=open;dashed=1;html=1;strokeWidth=1.5;strokeColor=#0284c7;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endFill=0;" edge="1" parent="1" source="actor_architect" target="iface_portal_provided">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- ═══════════════════════════════════════════════════════════════
+             COMPONENT 2: CATALOG & REGISTRY MANAGEMENT SERVICE
+             ═══════════════════════════════════════════════════════════════ -->
+        <mxCell id="comp_catalog" value="&lt;p style=&quot;margin:0;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;&amp;laquo;component&amp;raquo;&lt;/b&gt;&lt;br&gt;&lt;b style=&quot;font-size:13px;&quot;&gt;Catalog &amp;amp; Registry&lt;br&gt;Management Service&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-color:#bbf7d0;&quot;&gt;&lt;p style=&quot;margin:0;margin-left:8px;font-size:10px;text-align:left;color:#166534;&quot;&gt;• Service CRUD &amp;amp; Metadata Registry&lt;br&gt;• Elastic Full-Text Search Engine&lt;br&gt;• Versioning &amp;amp; Environment Registry&lt;/p&gt;" style="html=1;dropTarget=0;whiteSpace=wrap;fillColor=#f0fdf4;strokeColor=#16a34a;strokeWidth=1.8;shape=component;align=center;spacingTop=6;" vertex="1" parent="1">
+          <mxGeometry x="720" y="200" width="230" height="150" as="geometry"/>
+        </mxCell>
+
+        <!-- Provided Interface: ICatalogService -->
+        <mxCell id="iface_catalog_prov" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#ffffff;strokeColor=#16a34a;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="645" y="250" width="20" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="lbl_iface_cat" value="&lt;b&gt;ICatalogService&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:10px;color:#475569;&quot;&gt;gRPC / REST API&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=bottom;fontSize=11;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="585" y="210" width="140" height="35" as="geometry"/>
+        </mxCell>
+        <mxCell id="conn_cat_prov" value="" style="endArrow=none;html=1;strokeWidth=1.8;strokeColor=#16a34a;entryX=0;entryY=0.4;entryDx=0;entryDy=0;" edge="1" parent="1" source="iface_catalog_prov" target="comp_catalog">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Gateway Requires ICatalogService (Socket) -->
+        <mxCell id="sock_gw_cat" value="" style="shape=arc;whiteSpace=wrap;html=1;strokeWidth=2;strokeColor=#0284c7;fillColor=none;rotation=-90;" vertex="1" parent="1">
+          <mxGeometry x="635" y="247" width="26" height="26" as="geometry"/>
+        </mxCell>
+        <mxCell id="conn_gw_cat_edge" value="" style="endArrow=none;html=1;strokeWidth=1.8;strokeColor=#0284c7;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="comp_gateway" target="sock_gw_cat">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- ═══════════════════════════════════════════════════════════════
+             COMPONENT 3: HEALTH MONITORING & PERIODIC PINGER SERVICE
+             ═══════════════════════════════════════════════════════════════ -->
+        <mxCell id="comp_health" value="&lt;p style=&quot;margin:0;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;&amp;laquo;component&amp;raquo;&lt;/b&gt;&lt;br&gt;&lt;b style=&quot;font-size:13px;&quot;&gt;Health Monitoring &amp;amp;&lt;br&gt;Periodic Pinger Service&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-color:#fed7aa;&quot;&gt;&lt;p style=&quot;margin:0;margin-left:8px;font-size:10px;text-align:left;color:#9a3412;&quot;&gt;• 30s Health Check Probe Engine&lt;br&gt;• 24h Rolling Availability Calculator&lt;br&gt;• Outage Threshold Detector (3 fails)&lt;/p&gt;" style="html=1;dropTarget=0;whiteSpace=wrap;fillColor=#fff7ed;strokeColor=#ea580c;strokeWidth=1.8;shape=component;align=center;spacingTop=6;" vertex="1" parent="1">
+          <mxGeometry x="720" y="420" width="230" height="150" as="geometry"/>
+        </mxCell>
+
+        <!-- Provided Interface: IHealthService -->
+        <mxCell id="iface_health_prov" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#ffffff;strokeColor=#ea580c;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="645" y="475" width="20" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="lbl_iface_health" value="&lt;b&gt;IHealthStatus&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:10px;color:#475569;&quot;&gt;REST / WebSocket Telemetry&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=bottom;fontSize=11;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="560" y="440" width="170" height="35" as="geometry"/>
+        </mxCell>
+        <mxCell id="conn_health_prov" value="" style="endArrow=none;html=1;strokeWidth=1.8;strokeColor=#ea580c;entryX=0;entryY=0.45;entryDx=0;entryDy=0;" edge="1" parent="1" source="iface_health_prov" target="comp_health">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Gateway Requires IHealthService (Socket) -->
+        <mxCell id="sock_gw_health" value="" style="shape=arc;whiteSpace=wrap;html=1;strokeWidth=2;strokeColor=#0284c7;fillColor=none;rotation=-90;" vertex="1" parent="1">
+          <mxGeometry x="635" y="472" width="26" height="26" as="geometry"/>
+        </mxCell>
+        <mxCell id="conn_gw_health_edge" value="" style="endArrow=none;html=1;strokeWidth=1.8;strokeColor=#0284c7;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="comp_gateway" target="sock_gw_health">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- ═══════════════════════════════════════════════════════════════
+             COMPONENT 4: DEPENDENCY MAPPING & GRAPH ENGINE
+             ═══════════════════════════════════════════════════════════════ -->
+        <mxCell id="comp_graph" value="&lt;p style=&quot;margin:0;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;&amp;laquo;component&amp;raquo;&lt;/b&gt;&lt;br&gt;&lt;b style=&quot;font-size:13px;&quot;&gt;Dependency Mapping &amp;amp;&lt;br&gt;Graph Engine&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-color:#e9d5ff;&quot;&gt;&lt;p style=&quot;margin:0;margin-left:8px;font-size:10px;text-align:left;color:#6b21a8;&quot;&gt;• Upstream/Downstream Trace Analyzer&lt;br&gt;• 200+ Node Interactive Graph Renderer&lt;br&gt;• Impact &amp;amp; Blast Radius Modeler&lt;/p&gt;" style="html=1;dropTarget=0;whiteSpace=wrap;fillColor=#faf5ff;strokeColor=#9333ea;strokeWidth=1.8;shape=component;align=center;spacingTop=6;" vertex="1" parent="1">
+          <mxGeometry x="720" y="640" width="230" height="150" as="geometry"/>
+        </mxCell>
+
+        <!-- Provided Interface: IDependencyGraph -->
+        <mxCell id="iface_graph_prov" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#ffffff;strokeColor=#9333ea;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="645" y="700" width="20" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="lbl_iface_graph" value="&lt;b&gt;IDependencyGraph&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:10px;color:#475569;&quot;&gt;GraphQL / JSON Graph API&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=bottom;fontSize=11;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="570" y="660" width="160" height="35" as="geometry"/>
+        </mxCell>
+        <mxCell id="conn_graph_prov" value="" style="endArrow=none;html=1;strokeWidth=1.8;strokeColor=#9333ea;entryX=0;entryY=0.45;entryDx=0;entryDy=0;" edge="1" parent="1" source="iface_graph_prov" target="comp_graph">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Dependency Engine Requires ICatalogService (Inter-Service Usage) -->
+        <mxCell id="edge_graph_needs_cat" value="&amp;laquo;use&amp;raquo;" style="endArrow=open;dashed=1;html=1;strokeWidth=1.5;strokeColor=#9333ea;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;endFill=0;" edge="1" parent="1" source="comp_graph" target="comp_health">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- ═══════════════════════════════════════════════════════════════
+             COMPONENT 5: API DOCUMENTATION AGGREGATOR SERVICE
+             ═══════════════════════════════════════════════════════════════ -->
+        <mxCell id="comp_doc" value="&lt;p style=&quot;margin:0;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;&amp;laquo;component&amp;raquo;&lt;/b&gt;&lt;br&gt;&lt;b style=&quot;font-size:13px;&quot;&gt;API Documentation&lt;br&gt;Aggregator Service&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-color:#fed7aa;&quot;&gt;&lt;p style=&quot;margin:0;margin-left:8px;font-size:10px;text-align:left;color:#b45309;&quot;&gt;• OpenAPI / Swagger 3.0 Parser&lt;br&gt;• Dynamic Endpoint Browser&lt;br&gt;• Schema Validation &amp;amp; Mock Sandbox&lt;/p&gt;" style="html=1;dropTarget=0;whiteSpace=wrap;fillColor=#fffbeb;strokeColor=#d97706;strokeWidth=1.8;shape=component;align=center;spacingTop=6;" vertex="1" parent="1">
+          <mxGeometry x="720" y="850" width="230" height="150" as="geometry"/>
+        </mxCell>
+
+        <!-- Provided Interface: IDocViewer -->
+        <mxCell id="iface_doc_prov" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#ffffff;strokeColor=#d97706;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="645" y="910" width="20" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="lbl_iface_doc" value="&lt;b&gt;IDocViewer&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:10px;color:#475569;&quot;&gt;OpenAPI Spec / UI Bundle&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=bottom;fontSize=11;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="575" y="870" width="150" height="35" as="geometry"/>
+        </mxCell>
+        <mxCell id="conn_doc_prov" value="" style="endArrow=none;html=1;strokeWidth=1.8;strokeColor=#d97706;entryX=0;entryY=0.45;entryDx=0;entryDy=0;" edge="1" parent="1" source="iface_doc_prov" target="comp_doc">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- ═══════════════════════════════════════════════════════════════
+             COMPONENT 6: ALERTING & NOTIFICATION DISPATCHER SERVICE
+             ═══════════════════════════════════════════════════════════════ -->
+        <mxCell id="comp_alert" value="&lt;p style=&quot;margin:0;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;&amp;laquo;component&amp;raquo;&lt;/b&gt;&lt;br&gt;&lt;b style=&quot;font-size:13px;&quot;&gt;Alerting &amp;amp; Notification&lt;br&gt;Dispatcher Service&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-color:#fecdd3;&quot;&gt;&lt;p style=&quot;margin:0;margin-left:8px;font-size:10px;text-align:left;color:#be123c;&quot;&gt;• Outage Event Evaluation Engine&lt;br&gt;• Multi-Channel Alert Router&lt;br&gt;• On-Call Rota &amp;amp; Escalation Policy&lt;/p&gt;" style="html=1;dropTarget=0;whiteSpace=wrap;fillColor=#fff1f2;strokeColor=#e11d48;strokeWidth=1.8;shape=component;align=center;spacingTop=6;" vertex="1" parent="1">
+          <mxGeometry x="1100" y="420" width="240" height="150" as="geometry"/>
+        </mxCell>
+
+        <!-- ═══════════════════════════════════════════════════════════════
+             ASYNC EVENT BUS / MESSAGE BROKER (ASSEMBLY CONNECTOR)
+             ═══════════════════════════════════════════════════════════════ -->
+        <mxCell id="comp_eventbus" value="&lt;p style=&quot;margin:0;margin-top:2px;text-align:center;&quot;&gt;&lt;b&gt;&amp;laquo;component&amp;raquo;&lt;/b&gt;&lt;br&gt;&lt;b style=&quot;font-size:12px;&quot;&gt;Event Broker / Message Bus&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:10px;color:#334155;&quot;&gt;AMQP / RabbitMQ Event Hub&lt;/font&gt;&lt;/p&gt;" style="html=1;dropTarget=0;whiteSpace=wrap;fillColor=#f1f5f9;strokeColor=#475569;strokeWidth=1.5;shape=component;align=center;spacingTop=4;" vertex="1" parent="1">
+          <mxGeometry x="975" y="320" width="180" height="70" as="geometry"/>
+        </mxCell>
+
+        <!-- Health Service publishes to EventBus -->
+        <mxCell id="edge_health_pub" value="&lt;b&gt;IAlertPublisher&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px;&quot;&gt;&amp;laquo;publish&amp;raquo; outage event&lt;/font&gt;" style="endArrow=open;dashed=1;html=1;strokeWidth=1.5;strokeColor=#ea580c;exitX=0.85;exitY=0;exitDx=0;exitDy=0;entryX=0.25;entryY=1;entryDx=0;entryDy=0;endFill=0;" edge="1" parent="1" source="comp_health" target="comp_eventbus">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Alert Service consumes from EventBus -->
+        <mxCell id="edge_alert_sub" value="&lt;b&gt;IEventConsumer&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px;&quot;&gt;&amp;laquo;subscribe&amp;raquo; topic&lt;/font&gt;" style="endArrow=open;dashed=1;html=1;strokeWidth=1.5;strokeColor=#e11d48;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.25;entryY=0;entryDx=0;entryDy=0;endFill=0;" edge="1" parent="1" source="comp_eventbus" target="comp_alert">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- ═══════════════════════════════════════════════════════════════
+             EXTERNAL TARGETS & CLOUD INTEGRATIONS (RIGHT SIDE)
+             ═══════════════════════════════════════════════════════════════ -->
+        <mxCell id="comp_target_services" value="&lt;p style=&quot;margin:0;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;&amp;laquo;external component&amp;raquo;&lt;/b&gt;&lt;br&gt;&lt;b style=&quot;font-size:13px;&quot;&gt;Monitored Enterprise&lt;br&gt;Microservices (200+)&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-color:#cbd5e1;&quot;&gt;&lt;p style=&quot;margin:0;margin-left:8px;font-size:10px;text-align:left;color:#475569;&quot;&gt;• /health &amp;amp; /metrics endpoints&lt;br&gt;• Swagger / OpenAPI doc specs&lt;br&gt;• Distributed Tracing context&lt;/p&gt;" style="html=1;dropTarget=0;whiteSpace=wrap;fillColor=#f8fafc;strokeColor=#475569;strokeWidth=1.8;shape=component;align=center;spacingTop=6;" vertex="1" parent="1">
+          <mxGeometry x="1440" y="380" width="200" height="150" as="geometry"/>
+        </mxCell>
+
+        <!-- Health Probe Interface: Provided by target services, Required by Health Service -->
+        <mxCell id="iface_probe_prov" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#ffffff;strokeColor=#475569;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="1390" y="445" width="20" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="lbl_iface_probe" value="&lt;b&gt;IHealthProbe&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:10px;color:#475569;&quot;&gt;HTTPS GET /health (30s)&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=bottom;fontSize=11;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="1320" y="405" width="160" height="35" as="geometry"/>
+        </mxCell>
+        <mxCell id="conn_probe_prov" value="" style="endArrow=none;html=1;strokeWidth=1.8;strokeColor=#475569;entryX=0;entryY=0.45;entryDx=0;entryDy=0;" edge="1" parent="1" source="iface_probe_prov" target="comp_target_services">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="sock_health_probe" value="" style="shape=arc;whiteSpace=wrap;html=1;strokeWidth=2;strokeColor=#ea580c;fillColor=none;rotation=90;" vertex="1" parent="1">
+          <mxGeometry x="1384" y="442" width="26" height="26" as="geometry"/>
+        </mxCell>
+        <mxCell id="conn_health_probe_edge" value="" style="endArrow=none;html=1;strokeWidth=1.8;strokeColor=#ea580c;exitX=1;exitY=0.45;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="comp_health" target="sock_health_probe">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- External Notification Channels -->
+        <mxCell id="comp_notif_channels" value="&lt;p style=&quot;margin:0;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;&amp;laquo;external system&amp;raquo;&lt;/b&gt;&lt;br&gt;&lt;b style=&quot;font-size:13px;&quot;&gt;Alert Receivers &amp;amp;&lt;br&gt;Notification Channels&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-color:#fecdd3;&quot;&gt;&lt;p style=&quot;margin:0;margin-left:8px;font-size:10px;text-align:left;color:#9f1239;&quot;&gt;• Slack Incoming Webhooks&lt;br&gt;• PagerDuty Events API v2&lt;br&gt;• Corporate SMTP Email Server&lt;/p&gt;" style="html=1;dropTarget=0;whiteSpace=wrap;fillColor=#fff1f2;strokeColor=#e11d48;strokeWidth=1.8;shape=component;align=center;spacingTop=6;" vertex="1" parent="1">
+          <mxGeometry x="1440" y="600" width="200" height="150" as="geometry"/>
+        </mxCell>
+
+        <!-- Interface: INotificationChannel -->
+        <mxCell id="iface_notif_prov" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#ffffff;strokeColor=#e11d48;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="1390" y="665" width="20" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="lbl_iface_notif" value="&lt;b&gt;INotificationChannel&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:10px;color:#475569;&quot;&gt;REST Webhook / SMTP&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=bottom;fontSize=11;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="1320" y="625" width="160" height="35" as="geometry"/>
+        </mxCell>
+        <mxCell id="conn_notif_prov" value="" style="endArrow=none;html=1;strokeWidth=1.8;strokeColor=#e11d48;entryX=0;entryY=0.45;entryDx=0;entryDy=0;" edge="1" parent="1" source="iface_notif_prov" target="comp_notif_channels">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="sock_alert_notif" value="" style="shape=arc;whiteSpace=wrap;html=1;strokeWidth=2;strokeColor=#e11d48;fillColor=none;rotation=90;" vertex="1" parent="1">
+          <mxGeometry x="1384" y="662" width="26" height="26" as="geometry"/>
+        </mxCell>
+        <mxCell id="conn_alert_notif_edge" value="" style="endArrow=none;html=1;strokeWidth=1.8;strokeColor=#e11d48;exitX=0.9;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="comp_alert" target="sock_alert_notif">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- ═══════════════════════════════════════════════════════════════
+             STORAGE & INFRASTRUCTURE LAYER (BOTTOM)
+             ═══════════════════════════════════════════════════════════════ -->
+        <mxCell id="comp_db_polyglot" value="&lt;p style=&quot;margin:0;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;&amp;laquo;component&amp;raquo;&lt;/b&gt;&lt;br&gt;&lt;b style=&quot;font-size:13px;&quot;&gt;Polyglot Persistence Layer&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-color:#cbd5e1;&quot;&gt;&lt;p style=&quot;margin:0;margin-left:8px;font-size:10px;text-align:left;color:#334155;&quot;&gt;• &lt;b&gt;PostgreSQL DB:&lt;/b&gt; Relational service catalog metadata &amp;amp; schemas&lt;br&gt;• &lt;b&gt;TimescaleDB:&lt;/b&gt; 24h rolling time-series probe latency &amp;amp; health metrics&lt;br&gt;• &lt;b&gt;Neo4j Graph DB:&lt;/b&gt; Upstream/downstream topological graph index&lt;br&gt;• &lt;b&gt;Redis Cache:&lt;/b&gt; OpenAPI specs &amp;amp; rapid full-text catalog query cache&lt;/p&gt;" style="html=1;dropTarget=0;whiteSpace=wrap;fillColor=#f8fafc;strokeColor=#334155;strokeWidth=1.8;shape=component;align=center;spacingTop=6;" vertex="1" parent="1">
+          <mxGeometry x="1040" y="850" width="300" height="150" as="geometry"/>
+        </mxCell>
+
+        <!-- Component 7: Secrets Vault -->
+        <mxCell id="comp_vault" value="&lt;p style=&quot;margin:0;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;&amp;laquo;component&amp;raquo;&lt;/b&gt;&lt;br&gt;&lt;b style=&quot;font-size:12px;&quot;&gt;Enterprise Secrets Vault&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:10px;color:#047857;&quot;&gt;HashiCorp Vault / KMS&lt;/font&gt;&lt;/p&gt;" style="html=1;dropTarget=0;whiteSpace=wrap;fillColor=#ecfdf5;strokeColor=#059669;strokeWidth=1.5;shape=component;align=center;spacingTop=4;" vertex="1" parent="1">
+          <mxGeometry x="320" y="550" width="220" height="90" as="geometry"/>
+        </mxCell>
+
+        <!-- Provided Interface: IVaultAccess -->
+        <mxCell id="iface_vault_prov" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#ffffff;strokeColor=#059669;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="420" y="480" width="20" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="lbl_iface_vault" value="&lt;b&gt;IVaultAccess&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px;color:#475569;&quot;&gt;mTLS / Token Auth&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=bottom;fontSize=10;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="425" y="475" width="110" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="conn_vault_prov" value="" style="endArrow=none;html=1;strokeWidth=1.8;strokeColor=#059669;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="iface_vault_prov" target="comp_vault">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <!-- Gateway uses Vault -->
+        <mxCell id="edge_gw_vault" value="&amp;laquo;use&amp;raquo;" style="endArrow=open;dashed=1;html=1;strokeWidth=1.5;strokeColor=#059669;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;endFill=0;" edge="1" parent="1" source="comp_gateway" target="iface_vault_prov">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Data Access Connections -->
+        <mxCell id="edge_cat_db" value="&lt;font style=&quot;font-size:9px;&quot;&gt;JDBC / SQL&lt;/font&gt;" style="endArrow=open;dashed=1;html=1;strokeWidth=1.5;strokeColor=#16a34a;exitX=1;exitY=0.7;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;endFill=0;" edge="1" parent="1" source="comp_catalog" target="comp_db_polyglot">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge_graph_db" value="&lt;font style=&quot;font-size:9px;&quot;&gt;Bolt / Cypher&lt;/font&gt;" style="endArrow=open;dashed=1;html=1;strokeWidth=1.5;strokeColor=#9333ea;exitX=1;exitY=0.6;exitDx=0;exitDy=0;entryX=0.25;entryY=0;entryDx=0;entryDy=0;endFill=0;" edge="1" parent="1" source="comp_graph" target="comp_db_polyglot">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- ═══════════════════════════════════════════════════════════════
+             LEGEND / ANNOTATION BLOCK
+             ═══════════════════════════════════════════════════════════════ -->
+        <mxCell id="legend_box" value="&lt;b&gt;UML 2.5 Component Diagram Notation Legend&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:10px;color:#334155;&quot;&gt;● &lt;b&gt;&amp;laquo;component&amp;raquo;&lt;/b&gt;: Modular, replaceable execution unit encapsulating specific service logic.&lt;br&gt;● &lt;b&gt;Provided Interface (Ball / Lollipop)&lt;/b&gt;: Operations offered to client components.&lt;br&gt;● &lt;b&gt;Required Interface (Socket)&lt;/b&gt;: Operations required by the component to function.&lt;br&gt;● &lt;b&gt;Assembly Connector&lt;/b&gt;: Direct coupling between a provided and required interface.&lt;br&gt;● &lt;b&gt;Dependency (&amp;laquo;use&amp;raquo; / dashed arrow)&lt;/b&gt;: Usage relationship or asynchronous event topic.&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f1f5f9;strokeColor=#94a3b8;strokeWidth=1.2;align=left;spacingLeft=15;spacingTop=10;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="60" y="1030" width="1580" height="90" as="geometry"/>
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
