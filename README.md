@@ -46,11 +46,10 @@ An enterprise developer portal mapping microservice dependencies, aggregating AP
 
 | # | Deliverable | Format | File Link | Description |
 |---|---|---|---|---|
-| **1** | **UML Component Diagram (PS #42)** | draw.io + StarUML + PNG + PDF | [component_diagram.png](component_diagram.png)<br>[component_diagram.pdf](component_diagram.pdf)<br>[component_diagram.drawio](component_diagram.drawio)<br>[component_diagram.mdj](component_diagram.mdj) | 6 Core Components, 7 Interfaces (Ball/Socket), Assembly Connectors, Polyglot DBs, EventBus, Secrets Vault. |
-| **2** | **Architectural Justification (PS #42)** | PDF, Word (.docx), Markdown | [architectural_justification.pdf](architectural_justification.pdf) *(1-Page PDF)*<br>[architectural_justification.docx](architectural_justification.docx) *(Word Doc)*<br>[architectural_justification.md](architectural_justification.md) | Technical justification selecting **Microservices Architecture** with 2 scenario reasons, security advantage, and performance benefit. |
-| **3** | **Combined Master Lab 3 Deliverable** | PDF | **[Lab_3_Component_Modeling_PES1UG24CS473.pdf](Lab_3_Component_Modeling_PES1UG24CS473.pdf)** | Complete submission report containing 1-page Justification + High-Res Component Diagram page. |
-| **4** | **Coffee Kiosk Scenario Deliverables** *(Handout Example)* | draw.io + PNG + PDF + DOCX + MD | [coffee_kiosk_component_diagram.png](coffee_kiosk_component_diagram.png)<br>[coffee_kiosk_justification.pdf](coffee_kiosk_justification.pdf)<br>[coffee_kiosk_component_diagram.drawio](coffee_kiosk_component_diagram.drawio)<br>[coffee_kiosk_justification.docx](coffee_kiosk_justification.docx) | 5 Components (Touchscreen UI, Order Manager, Payment Service, Printer Controller, Menu DB) + 4 Interfaces. |
-| **Folder** | **Submission Directory Standards** | Directories | [`2-Folder for Architectural Diagram`](2-Folder%20for%20Architectural%20Diagram/)<br>[`LAB 3/Problem_Statement_42`](LAB%203/Problem_Statement_42/)<br>[`LAB 3/Coffee_Kiosk_Scenario`](LAB%203/Coffee_Kiosk_Scenario/) | Fully organized folders adhering to official GitHub submission guidelines. |
+| **1** | **UML Component Diagram** | draw.io + StarUML + PNG + PDF | [component_diagram.png](component_diagram.png)<br>[component_diagram.pdf](component_diagram.pdf)<br>[component_diagram.drawio](component_diagram.drawio)<br>[component_diagram.mdj](component_diagram.mdj) | 6 Core Components, 7 Interfaces (Ball/Socket), Assembly Connectors, Polyglot DBs, EventBus, Secrets Vault. |
+| **2** | **Architectural Justification** | PDF, Word (.docx), Markdown | [architectural_justification.pdf](architectural_justification.pdf) *(1-Page PDF)*<br>[architectural_justification.docx](architectural_justification.docx) *(Word Doc)*<br>[architectural_justification.md](architectural_justification.md) | Technical justification selecting **Microservices Architecture** with 2 scenario reasons, security advantage, and performance benefit. |
+| **3** | **Combined Master Lab 3 Deliverable** | PDF | **[Lab_3_Component_Modeling_PES1UG24CS473.pdf](Lab_3_Component_Modeling_PES1UG24CS473.pdf)** | Complete submission report combining 1-page Justification + High-Res Component Diagram page. |
+| **Folder** | **Submission Directory Standards** | Directories | [`2-Folder for Architectural Diagram`](2-Folder%20for%20Architectural%20Diagram/)<br>[`LAB 3/Problem_Statement_42`](LAB%203/Problem_Statement_42/) | Fully organized folders adhering to official GitHub submission guidelines. |
 
 ---
 
@@ -74,12 +73,6 @@ An enterprise developer portal mapping microservice dependencies, aggregating AP
 ## UML Component Diagram (Problem Statement #42)
 
 ![UML Component Diagram](component_diagram.png)
-
----
-
-## Coffee Kiosk Component Diagram (Handout Scenario)
-
-![Coffee Kiosk Component Diagram](coffee_kiosk_component_diagram.png)
 
 ---
 
@@ -120,19 +113,19 @@ An enterprise developer portal mapping microservice dependencies, aggregating AP
 │   ├── component_diagram.mdj                     # UML 2.5 Component Diagram (StarUML Model)
 │   ├── architectural_justification.md            # Technical Architectural Justification (Markdown)
 │   ├── architectural_justification.pdf           # Formatted 1-Page Architectural Justification (PDF)
-│   ├── architectural_justification.docx          # Formatted 1-Page Architectural Justification (Word)
-│   ├── coffee_kiosk_component_diagram.drawio     # Coffee Kiosk Component Diagram (draw.io XML)
-│   ├── coffee_kiosk_component_diagram.png        # Coffee Kiosk Component Diagram (PNG)
-│   ├── coffee_kiosk_component_diagram.pdf        # Coffee Kiosk Component Diagram (PDF)
-│   ├── coffee_kiosk_component_diagram.mdj        # Coffee Kiosk Component Diagram (StarUML Model)
-│   ├── coffee_kiosk_justification.md             # Coffee Kiosk Justification (Markdown)
-│   ├── coffee_kiosk_justification.pdf            # Coffee Kiosk Justification (PDF)
-│   └── coffee_kiosk_justification.docx           # Coffee Kiosk Justification (Word)
+│   └── architectural_justification.docx          # Formatted 1-Page Architectural Justification (Word)
 ├── LAB 3/                                        # Lab 3 Working Handout & Submissions
 │   ├── Lab_3_Architecture_Student_handout.pdf    # Lab 3 instructions & rubrics
 │   ├── Git Hub Project Submission Details.docx   # Submission nomenclature instructions
-│   ├── Problem_Statement_42/                     # Lab 3 Deliverables for Problem Statement #42
-│   └── Coffee_Kiosk_Scenario/                    # Lab 3 Deliverables for Coffee Kiosk Scenario
+│   └── Problem_Statement_42/                     # Lab 3 Deliverables for Problem Statement #42
+│       ├── Lab_3_Component_Modeling_PES1UG24CS473.pdf
+│       ├── component_diagram.drawio
+│       ├── component_diagram.png
+│       ├── component_diagram.pdf
+│       ├── component_diagram.mdj
+│       ├── architectural_justification.md
+│       ├── architectural_justification.pdf
+│       └── architectural_justification.docx
 ├── 42_SE_Lab1_SE_Problem_Statements.pdf          # Lab 1: Original problem statement handout (PS #42)
 ├── Lab_2_Jira_Student_Handout.pdf                # Lab 2: Jira student handout
 ├── Kanban.PDF                                    # Lab 2 Deliverable 1: Kanban project PDF (6 screenshots)
