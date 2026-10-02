@@ -28,7 +28,7 @@ In accordance with official PES University Software Engineering Lab submission g
 ## 📋 Comprehensive Deliverables Index
 
 ### 📂 Lab 1: Requirements Engineering & UML Use-Case Modelling
-- **Original Handout:** [42_SE_Lab1_SE_Problem_Statements.pdf](42_SE_Lab1_SE_Problem_Statements.pdf)
+- **Original Handout:** [42_SE_Lab1_SE_Problem_Statements.pdf](1-Folder%20for%20RE/42_SE_Lab1_SE_Problem_Statements.pdf)
 - **Requirements & RTM Table:** [requirements.md](1-Folder%20for%20RE/requirements.md) & [requirements.pdf](1-Folder%20for%20RE/requirements.pdf) (Includes FR-001..FR-005, NFR-001..NFR-002, and full Requirements Traceability Matrix)
 - **Primary Use-Case Diagram:** [use_case_diagram.png](1-Folder%20for%20RE/use_case_diagram.png) & [use_case_diagram.drawio](1-Folder%20for%20RE/use_case_diagram.drawio) & [use_case_diagram.mdj](1-Folder%20for%20RE/use_case_diagram.mdj)
 - **Alternate Flow Use-Case Diagram:** [alternate_flow_use_case_diagram.png](1-Folder%20for%20RE/alternate_flow_use_case_diagram.png) & [alternate_flow_use_case_diagram.drawio](1-Folder%20for%20RE/alternate_flow_use_case_diagram.drawio) & [alternate_flow_use_case_diagram.mdj](1-Folder%20for%20RE/alternate_flow_use_case_diagram.mdj)
@@ -36,6 +36,9 @@ In accordance with official PES University Software Engineering Lab submission g
 - **Exception Flow Specification:** [exception_flow_specification.md](1-Folder%20for%20RE/exception_flow_specification.md) & [exception_flow_specification.pdf](1-Folder%20for%20RE/exception_flow_specification.pdf)
 
 ### 📂 Lab 2: Agile Jira & GitHub Projects
+- **Master Jira Implementation Report:** [Subramani_BM_PES1UG24CS473-BPS#42.pdf](3-Folder%20for%20Project%20Creational%20screen%20shots%20in%20GitHub%20and%20Jir%20Tool/Subramani_BM_PES1UG24CS473-BPS#42.pdf)
+- **Master Activity Summary:** [Lab_Activity_Summary_Subramani_BM_PES1UG24CS473.pdf](3-Folder%20for%20Project%20Creational%20screen%20shots%20in%20GitHub%20and%20Jir%20Tool/Lab_Activity_Summary_Subramani_BM_PES1UG24CS473.pdf)
+- **Original Handout:** [Lab_2_Jira_Student_Handout.pdf](3-Folder%20for%20Project%20Creational%20screen%20shots%20in%20GitHub%20and%20Jir%20Tool/Lab_2_Jira_Student_Handout.pdf)
 - **Kanban Implementation:** [Kanban.PDF](3-Folder%20for%20Project%20Creational%20screen%20shots%20in%20GitHub%20and%20Jir%20Tool/Kanban.PDF) & [kanban_jira_reference.md](3-Folder%20for%20Project%20Creational%20screen%20shots%20in%20GitHub%20and%20Jir%20Tool/kanban_jira_reference.md) (`KBPS42`)
 - **Scrum & Sprint Simulation:** [Scrum.PDF](3-Folder%20for%20Project%20Creational%20screen%20shots%20in%20GitHub%20and%20Jir%20Tool/Scrum.PDF) & [scrum_jira_reference.md](3-Folder%20for%20Project%20Creational%20screen%20shots%20in%20GitHub%20and%20Jir%20Tool/scrum_jira_reference.md) (`SBP42`)
 - **Bug Tracking & Defect Management:** [BugReport.PDF](3-Folder%20for%20Project%20Creational%20screen%20shots%20in%20GitHub%20and%20Jir%20Tool/BugReport.PDF) & [bugtracker_jira_reference.md](3-Folder%20for%20Project%20Creational%20screen%20shots%20in%20GitHub%20and%20Jir%20Tool/bugtracker_jira_reference.md) (`BTBPS42`)
@@ -45,6 +48,7 @@ In accordance with official PES University Software Engineering Lab submission g
 - **UML 2.5 Component Diagram (Zero-Collision):** [component_diagram.png](2-Folder%20for%20Architectural%20Diagram/component_diagram.png) & [component_diagram.pdf](2-Folder%20for%20Architectural%20Diagram/component_diagram.pdf) & [component_diagram.drawio](2-Folder%20for%20Architectural%20Diagram/component_diagram.drawio) & [component_diagram.mdj](2-Folder%20for%20Architectural%20Diagram/component_diagram.mdj)
 - **1-Page Architectural Justification:** [architectural_justification.pdf](2-Folder%20for%20Architectural%20Diagram/architectural_justification.pdf) & [architectural_justification.docx](2-Folder%20for%20Architectural%20Diagram/architectural_justification.docx) & [architectural_justification.md](2-Folder%20for%20Architectural%20Diagram/architectural_justification.md)
 - **Combined Submission PDF:** [Lab_3_Component_Modeling_PES1UG24CS473.pdf](2-Folder%20for%20Architectural%20Diagram/Lab_3_Component_Modeling_PES1UG24CS473.pdf) (High-Res Component Diagram + 1-Page Architectural Justification)
+- **Handouts:** [Lab_3_Architecture_Student_handout.pdf](2-Folder%20for%20Architectural%20Diagram/Lab_3_Architecture_Student_handout.pdf) & [Git Hub Project Submission Details.docx](2-Folder%20for%20Architectural%20Diagram/Git%20Hub%20Project%20Submission%20Details.docx)
 
 ---
 

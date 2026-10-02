@@ -42,3 +42,8 @@ This directory contains complete visual verification evidence of Project, Board,
   - `bt1.png`: Defect logging with severity, steps to reproduce, environment, and logs.
   - `bt2.png`: Defect triage, patch verification, and closed resolution.
 - **Report:** [BugReport.PDF](file:///Users/subramanibm/Projects/SE_Banana/3-Folder%20for%20Project%20Creational%20screen%20shots%20in%20GitHub%20and%20Jir%20Tool/BugReport.PDF) & [bugtracker_jira_reference.md](file:///Users/subramanibm/Projects/SE_Banana/3-Folder%20for%20Project%20Creational%20screen%20shots%20in%20GitHub%20and%20Jir%20Tool/bugtracker_jira_reference.md).
+
+#### 4. Master Activity Reports & Reference Handouts
+- **Master Jira Implementation Report (8 pages):** [Subramani_BM_PES1UG24CS473-BPS#42.pdf](file:///Users/subramanibm/Projects/SE_Banana/3-Folder%20for%20Project%20Creational%20screen%20shots%20in%20GitHub%20and%20Jir%20Tool/Subramani_BM_PES1UG24CS473-BPS#42.pdf)
+- **Master Lab Activity Summary:** [Lab_Activity_Summary_Subramani_BM_PES1UG24CS473.pdf](file:///Users/subramanibm/Projects/SE_Banana/3-Folder%20for%20Project%20Creational%20screen%20shots%20in%20GitHub%20and%20Jir%20Tool/Lab_Activity_Summary_Subramani_BM_PES1UG24CS473.pdf)
+- **Lab 2 Jira Student Handout:** [Lab_2_Jira_Student_Handout.pdf](file:///Users/subramanibm/Projects/SE_Banana/3-Folder%20for%20Project%20Creational%20screen%20shots%20in%20GitHub%20and%20Jir%20Tool/Lab_2_Jira_Student_Handout.pdf)
